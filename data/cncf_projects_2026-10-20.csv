@@ -1,0 +1,78 @@
+maturity,name,repo_url,category,subcategory
+graduated,Argo,https://github.com/argoproj/argo-cd,App Definition and Development,Continuous Integration & Delivery
+graduated,Buildpacks,https://github.com/buildpacks/pack,App Definition and Development,Application Definition & Image Build
+graduated,CRI-O,https://github.com/cri-o/cri-o,Runtime,Container Runtime
+graduated,Cilium,https://github.com/cilium/cilium,Runtime,Cloud Native Network
+graduated,CloudEvents,https://github.com/cloudevents/spec,App Definition and Development,Streaming & Messaging
+graduated,CoreDNS,https://github.com/coredns/coredns,Orchestration & Management,Coordination & Service Discovery
+graduated,Crossplane,https://github.com/crossplane/crossplane,Orchestration & Management,Scheduling & Orchestration
+graduated,CubeFS,https://github.com/cubeFS/cubefs,Runtime,Cloud Native Storage
+graduated,Dapr,https://github.com/dapr/dapr,App Definition and Development,Application Definition & Image Build
+graduated,Dragonfly,https://github.com/dragonflyoss/dragonfly,Provisioning,Container Registry
+graduated,Envoy,https://github.com/envoyproxy/envoy,Orchestration & Management,Service Proxy
+graduated,Falco,https://github.com/falcosecurity/falco,Provisioning,Security & Compliance
+graduated,Fluentd,https://github.com/fluent/fluentd,Observability and Analysis,Observability
+graduated,Flux,https://github.com/fluxcd/flux2,App Definition and Development,Continuous Integration & Delivery
+graduated,Harbor,https://github.com/goharbor/harbor,Provisioning,Container Registry
+graduated,Helm,https://github.com/helm/helm,App Definition and Development,Application Definition & Image Build
+graduated,Istio,https://github.com/istio/istio,Orchestration & Management,Service Mesh
+graduated,Jaeger,https://github.com/jaegertracing/jaeger,Observability and Analysis,Observability
+graduated,KEDA,https://github.com/kedacore/keda,Orchestration & Management,Scheduling & Orchestration
+graduated,Karmada,https://github.com/karmada-io/karmada,Orchestration & Management,Scheduling & Orchestration
+graduated,Knative,https://github.com/knative/serving,Orchestration & Management,Scheduling & Orchestration
+graduated,KubeEdge,https://github.com/kubeedge/kubeedge,Provisioning,Automation & Configuration
+graduated,Kubeflow,https://github.com/kubeflow/kubeflow,Orchestration & Management,Scheduling & Orchestration
+graduated,Kubernetes,https://github.com/kubernetes/kubernetes,Orchestration & Management,Scheduling & Orchestration
+graduated,Kyverno,https://github.com/kyverno/kyverno,Provisioning,Security & Compliance
+graduated,Linkerd,https://github.com/linkerd/linkerd2,Orchestration & Management,Service Mesh
+graduated,Open Policy Agent (OPA),https://github.com/open-policy-agent/opa,Provisioning,Security & Compliance
+graduated,OpenTelemetry,https://github.com/open-telemetry/community,Observability and Analysis,Observability
+graduated,Prometheus,https://github.com/prometheus/prometheus,Observability and Analysis,Observability
+graduated,Rook,https://github.com/rook/rook,Runtime,Cloud Native Storage
+graduated,SPIFFE,https://github.com/spiffe/spiffe,Provisioning,Key Management
+graduated,SPIRE,https://github.com/spiffe/spire,Provisioning,Key Management
+graduated,The Update Framework (TUF),https://github.com/theupdateframework/python-tuf,Provisioning,Security & Compliance
+graduated,TiKV,https://github.com/tikv/tikv,App Definition and Development,Database
+graduated,Vitess,https://github.com/vitessio/vitess,App Definition and Development,Database
+graduated,cert-manager,https://github.com/cert-manager/cert-manager,Provisioning,Security & Compliance
+graduated,containerd,https://github.com/containerd/containerd,Runtime,Container Runtime
+graduated,etcd,https://github.com/etcd-io/etcd,Orchestration & Management,Coordination & Service Discovery
+graduated,in-toto,https://github.com/in-toto/in-toto,Provisioning,Security & Compliance
+incubating,Artifact Hub,https://github.com/artifacthub/hub,App Definition and Development,Application Definition & Image Build
+incubating,Backstage,https://github.com/backstage/backstage,App Definition and Development,Application Definition & Image Build
+incubating,Chaos Mesh,https://github.com/chaos-mesh/chaos-mesh,Observability and Analysis,Chaos Engineering
+incubating,Cloud Custodian,https://github.com/cloud-custodian/cloud-custodian,Provisioning,Automation & Configuration
+incubating,Confidential Containers,https://github.com/confidential-containers/confidential-containers,Provisioning,Security & Compliance
+incubating,Container Network Interface (CNI),https://github.com/containernetworking/cni,Runtime,Cloud Native Network
+incubating,Contour,https://github.com/projectcontour/contour,Orchestration & Management,Service Proxy
+incubating,Cortex,https://github.com/cortexproject/cortex,Observability and Analysis,Observability
+incubating,Emissary-Ingress,https://github.com/emissary-ingress/emissary,Orchestration & Management,API Gateway
+incubating,Flatcar Container Linux,https://github.com/flatcar/Flatcar,Platform,Certified Kubernetes - Distribution
+incubating,Fluid,https://github.com/fluid-cloudnative/fluid,Orchestration & Management,Scheduling & Orchestration
+incubating,HAMi,https://github.com/Project-HAMi/HAMi,Orchestration & Management,Scheduling & Orchestration
+incubating,KServe,https://github.com/kserve/kserve,Inference,Framework
+incubating,Keycloak,https://github.com/keycloak/keycloak,Provisioning,Security & Compliance
+incubating,KubeVela,https://github.com/kubevela/kubevela,App Definition and Development,Application Definition & Image Build
+incubating,KubeVirt,https://github.com/kubevirt/kubevirt,App Definition and Development,Application Definition & Image Build
+incubating,Kubescape,https://github.com/kubescape/kubescape,Provisioning,Security & Compliance
+incubating,Lima,https://github.com/lima-vm/lima,Runtime,Container Runtime
+incubating,Litmus,https://github.com/litmuschaos/litmus,Observability and Analysis,Chaos Engineering
+incubating,Longhorn,https://github.com/longhorn/longhorn,Runtime,Cloud Native Storage
+incubating,Meshery,https://github.com/meshery/meshery,Provisioning,Automation & Configuration
+incubating,Microcks,https://github.com/microcks/microcks,App Definition and Development,Application Definition & Image Build
+incubating,NATS,https://github.com/nats-io/nats-server,App Definition and Development,Streaming & Messaging
+incubating,Notary Project,https://github.com/notaryproject/notation,Provisioning,Security & Compliance
+incubating,OpenCost,https://github.com/opencost/opencost,Observability and Analysis,Continuous Optimization
+incubating,OpenFGA,https://github.com/openfga/openfga,Provisioning,Security & Compliance
+incubating,OpenFeature,https://github.com/open-feature/spec,Observability and Analysis,Feature Flagging
+incubating,OpenKruise,https://github.com/openkruise/kruise,App Definition and Development,Continuous Integration & Delivery
+incubating,OpenYurt,https://github.com/openyurtio/openyurt,Provisioning,Automation & Configuration
+incubating,Operator Framework,https://github.com/operator-framework/operator-sdk,App Definition and Development,Application Definition & Image Build
+incubating,Strimzi,https://github.com/strimzi/strimzi-kafka-operator,App Definition and Development,Streaming & Messaging
+incubating,Tekton,https://github.com/tektoncd/pipeline,App Definition and Development,Continuous Integration & Delivery
+incubating,Thanos,https://github.com/thanos-io/thanos,Observability and Analysis,Observability
+incubating,Volcano,https://github.com/volcano-sh/volcano,Orchestration & Management,Scheduling & Orchestration
+incubating,gRPC,https://github.com/grpc/grpc,Orchestration & Management,Remote Procedure Call
+incubating,k8gb,https://github.com/k8gb-io/k8gb,Orchestration & Management,Coordination & Service Discovery
+incubating,metal3-io,https://github.com/metal3-io/baremetal-operator,Provisioning,Automation & Configuration
+incubating,wasmCloud,https://github.com/wasmCloud/wasmCloud,Orchestration & Management,Scheduling & Orchestration
