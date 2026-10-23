@@ -88,12 +88,32 @@ X={
 }
 pop=list(csv.DictReader(open(D+'cncf_projects_2026-10-20.csv')))
 assert set(X)=={r['name'] for r in pop}, set(X)^{r['name'] for r in pop}
-F=['project','maturity','outcome','persisted_where','automated_decision','smoke_only_runs','outcome_including_outside_scope','evidence']
+# Step 3: activity. Sum of non-skipped runs in the 90-day window over the project's tracked GitHub Actions
+# workflows in the defined scope (data/run_history_*.csv). Projects whose tests run on Prow or an external
+# service are marked n/a. outcome_active applies the pre-registered 'active' field: a level that rests only on
+# workflows with no run in the window drops to the level the remaining evidence supports.
+import glob
+RH=sorted(glob.glob(D+'run_history_*.csv'))[-1]
+OUTSIDE={('envoyproxy/gateway'),('falcosecurity/libs')}
+act={}
+for r in csv.DictReader(open(RH)):
+    if r['repo'] in OUTSIDE: continue
+    n=(int(r['completed'] or 0)-int(r['skipped'] or 0)) if r['state']!='not_found' else 0
+    act[r['project']]=act.get(r['project'],0)+max(n,0)
+NOT_ACTIONS={'Kubernetes','etcd','Istio','KubeVirt','Knative','gRPC'}
+DOWN={'KEDA':(M,'only workflow disabled by GitHub for inactivity (disabled_inactivity), 0 runs in 90 days'),
+      'Karmada':(M,'manual comparison workflow had 0 runs in 90 days')}
+F=['project','maturity','outcome','persisted_where','automated_decision','smoke_only_runs','outcome_including_outside_scope','actions_runs_90d','outcome_active','evidence']
 w=csv.DictWriter(open(D+'coding_projects.csv','w',newline=''),fieldnames=F,lineterminator='\n'); w.writeheader()
 for r in pop:
     o,p,d,s,oo,e=X[r['name']]
-    w.writerow(dict(zip(F,[r['name'],r['maturity'],o,p,d,s,oo or o,e])))
+    nm=r['name']
+    runs=('n/a (Prow or internal CI)' if nm in NOT_ACTIONS else 'n/a (external service: arewefastyet)' if nm=='Vitess'
+          else 'unknown (performance job absent from 30 sampled system-test runs)' if nm=='Strimzi'
+          else (act.get(nm,'') if nm in act else ''))
+    oa,why=DOWN.get(nm,(o,''))
+    w.writerow(dict(zip(F,[nm,r['maturity'],o,p,d,s,oo or o,runs,oa,e+('; step 3: '+why if why else '')])))
 from collections import Counter
 for m in ('graduated','incubating',None):
-    c=Counter(X[r['name']][0] for r in pop if m is None or r['maturity']==m)
-    print(m or 'all', sum(c.values()), dict(c))
+    c=Counter(DOWN.get(r['name'],(X[r['name']][0],))[0] for r in pop if m is None or r['maturity']==m)
+    print('active', m or 'all', sum(c.values()), dict(c))
