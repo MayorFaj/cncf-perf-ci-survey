@@ -49,6 +49,8 @@ Assigned from the strongest practice found in the project's repositories:
 5. **automated and persisted**: an automated run whose results are kept.
 6. **automated, persisted and compared**: as 5, plus an automatic alert or gate against a baseline or history (as pre-registered). Fixed-threshold gates and dashboard-only comparisons do not reach this level; they are recorded in `automated_decision`.
 
+**Activity (step 3).** `outcome_active` applies the pre-registered `active` field: a level that rests only on GitHub Actions workflows with no non-skipped run in the 90-day window drops to the level the remaining evidence supports (KEDA, Karmada). `actions_runs_90d` sums non-skipped runs of the project's tracked in-scope workflows; for jobs inside larger workflows it counts runs of the whole workflow, and the job-level sample in `data/run_history_*.csv` shows whether the performance job ran. Prow, internal CI and external services are not measured.
+
 Go `Benchmark` functions alone, without a target, script or documentation that tells people to run them, do not make a project "manual/ad hoc".
 
 ## Ambiguous cases
