@@ -1,0 +1,78 @@
+project,maturity,outcome,persisted_where,automated_decision,smoke_only_runs,outcome_including_outside_scope,evidence
+Argo,graduated,none,,,,none,No candidate in argo-cd or 4 CLOMonitor code repos (argo-workflows Makefile has no bench target used in CI)
+Buildpacks,graduated,"automated, persisted and compared",gh-pages history,"history comparison with alert (200%, fail-on-alert)",,"automated, persisted and compared",pack benchmark.yml
+CRI-O,graduated,none,,,,none,No candidate; cri-o/tools (2019) is not a performance tool. Kubernetes Prow node-throughput jobs exercise a container runtime but belong to Kubernetes (ambiguous case)
+Cilium,graduated,automated and persisted,GCS results bucket,fixed thresholds (ClusterLoader2),yes (cilium/ebpf benchtime=1x),automated and persisted,8 scale/perf workflows in cilium/cilium
+CloudEvents,graduated,none,,,,none,Spec repo mapped to 4 CLOMonitor code repos (SDKs); no candidate
+CoreDNS,graduated,manual/ad hoc only,,,,manual/ad hoc only,coredns/perf-tests (last commit 2017-10-27): manual scripts only
+Crossplane,graduated,none,,,,none,No candidate
+CubeFS,graduated,manual/ad hoc only,,,,manual/ad hoc only,"Benchmark tools in repo (blobstore/tool/bench, rpc2/bench); not run in CI"
+Dapr,graduated,automated and persisted,Azure Storage,fixed thresholds (test asserts),,automated and persisted,"dapr-perf.yml nightly, dapr-perf-components.yml weekly"
+Dragonfly,graduated,manual/ad hoc only,,,,manual/ad hoc only,"dragonflyoss/perf-tests (dfbench, active); its CI runs unit tests only"
+Envoy,graduated,manual/ad hoc only,,,yes (benchmark tests with --skip_expensive_benchmarks),automated and persisted,"envoyproxy/envoy-perf (last commit 2024-09-11), Nighthawk, docs FAQ how to benchmark Envoy. Outside defined scope: envoyproxy/gateway gates PRs on >5% benchstat regression and attaches a benchmark report to each release"
+Falco,graduated,none,,,,"automated, not persisted","No candidate in falco, falcosidekick or falcosecurity/test-infra. Outside defined scope: falcosecurity/libs perf.yml gates PRs against the latest master artifact (kept 30 days)"
+Fluentd,graduated,"automated, not persisted",,none,,"automated, not persisted","benchmark.yml in_tail benchmark on push/PR, job summary only"
+Flux,graduated,on demand only,RESULTS.md by hand,none,,on demand only,fluxcd/flux-benchmark test.yaml: run per release candidate via PR/push to bench* branches
+Harbor,graduated,manual/ad hoc only,,,,manual/ad hoc only,goharbor/perf k6 scripts; its CI only exercises the scripts at small size on changes to the perf repo (last commit 2025-12-08)
+Helm,graduated,none,,,,none,No candidate; helm/prow (2018) has no performance job
+Istio,graduated,automated and persisted,S3 per commit (blob.istio.io),"statistical comparison, report only (benchstat)",,automated and persisted,Prow postsubmit benchmark-report_istio_postsubmit; optional presubmit. Outside defined scope: ztunnel /test bench
+Jaeger,graduated,manual/ad hoc only,,,,manual/ad hoc only,jaegertracing/jaeger-performance (last commit 2021-06-07; OpenShift Jenkinsfile)
+KEDA,graduated,automated and persisted,Grafana Cloud k6 + Prometheus remote write,fixed thresholds (k6),,automated and persisted,"kedacore/keda-performance weekly on AKS; repo inactive since 2023-12-27, activity checked in step 3"
+Karmada,graduated,on demand only,,"none (side-by-side, judged by people)",,on demand only,ci-performance-compare.yaml manual dispatch
+Knative,graduated,automated and persisted,InfluxDB + grafana.knative.dev,fixed thresholds (SLA checks),,automated and persisted,knative/infra Prow periodic performance-tests_serving_main_periodic
+KubeEdge,graduated,none,,,,none,No candidate; only docs/images/perf
+Kubeflow,graduated,none,,,,none,"kubeflow/pipelines DAG scale test (120 nodes) checks success only, no measurement: excluded"
+Kubernetes,graduated,automated and persisted,perf-dash,"fixed thresholds (ClusterLoader2 SLOs, release-blocking)",,automated and persisted,kubernetes/test-infra sig-scalability jobs + kubernetes/perf-tests
+Kyverno,graduated,"automated, not persisted",,fixed thresholds (committed ceilings),,"automated, not persisted",check-tests.yaml + tests-k6.yaml
+Linkerd,graduated,manual/ad hoc only,,,,manual/ad hoc only,"No candidate in linkerd2 or linkerd2-proxy; published one-off benchmark studies (2019, 2021)"
+Open Policy Agent (OPA),graduated,"automated, persisted and compared",benchmarks branch (120 nights) + site,statistical comparison (nightly) + regression comment (per push),,"automated, persisted and compared","opa benchmarks-nightly.yaml, benchmarks.yaml; gatekeeper /benchmark and bench-test"
+OpenTelemetry,graduated,"automated, persisted and compared",gh-pages history; CodSpeed,"history comparison with alert (Python 200%, C++ 200%, Rust 120% comment-on-alert); CodSpeed","yes (Go test-bench, .NET validate-benchmarks)","automated, persisted and compared",Spec/community repo mapped to CLOMonitor code repos (39) + opentelemetry-benchmarks
+Prometheus,graduated,on demand only,,none (people compare dashboards),,on demand only,prombench via PR comment (repository_dispatch)
+Rook,graduated,none,,,,none,No candidate
+SPIFFE,graduated,none,,,,none,Spec repo; no candidate in CLOMonitor code repos
+SPIRE,graduated,none,,,,none,No candidate
+The Update Framework (TUF),graduated,none,,,,none,No candidate
+TiKV,graduated,"automated, not persisted",,none,,"automated, not persisted",tikv/rust-prometheus criterion on push/PR (logs); tikv docs describe manual go-ycsb benchmarking
+Vitess,graduated,automated and persisted,arewefastyet database + benchmark.vitess.io,statistical comparison shown on dashboard; no automated alert found,,automated and persisted,vitessio/arewefastyet nightly CRON + Benchmark me label
+cert-manager,graduated,none,,,,none,No candidate; cert-manager/test-infra has no performance job
+containerd,graduated,manual/ad hoc only,,,,manual/ad hoc only,"Makefile benchmark target, not used by CI; containerd Prow jobs are builds only"
+etcd,graduated,automated and persisted,perf-dash,none,,automated and persisted,kubernetes/test-infra ci-etcd-benchmark-put-amd64 daily
+in-toto,graduated,none,,,,none,No candidate in 7 code repos
+Artifact Hub,incubating,none,,,,none,No candidate
+Backstage,incubating,manual/ad hoc only,,,,manual/ad hoc only,catalog-backend performance tests skipped unless PERFORMANCE_TEST is set; no workflow sets it
+Chaos Mesh,incubating,none,,,,none,No candidate
+Cloud Custodian,incubating,none,,,,none,No candidate; cloud-custodian/infra (2023) has no performance job
+Confidential Containers,incubating,none,,,,none,Umbrella repo mapped to CLOMonitor code repo (operator); no candidate
+Container Network Interface (CNI),incubating,none,,,,none,No candidate
+Contour,incubating,manual/ad hoc only,,,,manual/ad hoc only,Makefile bench target deploys a GCP cluster (not used by CI); projectcontour/contour-perf last commit 2021-03-04
+Cortex,incubating,manual/ad hoc only,,,,manual/ad hoc only,cortexproject/test-infra corbench (last commit 2025-08-06); no trigger in cortex CI
+Emissary-Ingress,incubating,none,,,,none,No candidate
+Flatcar Container Linux,incubating,none,,,,none,No candidate
+Fluid,incubating,none,,,,none,No candidate
+HAMi,incubating,none,,,"yes (BENCHTIME=10x, timings deliberately not compared)",none,ci.yaml benchmark smoke run
+KServe,incubating,manual/ad hoc only,,,,manual/ad hoc only,test/benchmark and docs/samples/performance-testing: manual
+Keycloak,incubating,automated and persisted,result-data branch,none on performance (error-rate check only),,automated and persisted,keycloak/keycloak-benchmark weekly ROSA run
+KubeVela,incubating,none,,,,none,No candidate
+KubeVirt,incubating,automated and persisted,Prometheus (3 months) + Grafana,none (audit tool not invoked),,automated and persisted,kubevirt/project-infra periodic sig-performance 3x daily
+Kubescape,incubating,"automated, not persisted",,"baseline comparison with gate (>10% CPU/memory vs latest release, same job)",,"automated, not persisted",node-agent benchmark.yaml per PR; helm-charts triggers a vendor repository on label
+Lima,incubating,none,,,,none,No candidate
+Litmus,incubating,none,,,,none,No candidate
+Longhorn,incubating,manual/ad hoc only,,,,manual/ad hoc only,"Release checklist issue template for manual benchmarks; longhorn/benchmark (kbench) tool, CI builds the tool only"
+Meshery,incubating,none,,,,none,"Performance workflows test Meshery performance-management features, not Meshery performance: excluded"
+Microcks,incubating,none,,,,none,k6 used for functional API tests: excluded
+NATS,incubating,"automated, not persisted",,none,,"automated, not persisted","nats-server mqtt-test benchmarks per PR (logs, TODO compare); nats.rs cargo bench on push (artifact)"
+Notary Project,incubating,none,,,,none,No candidate
+OpenCost,incubating,none,,,,none,No candidate
+OpenFGA,incubating,"automated, not persisted",Actions cache only (expires),"history comparison with alert (github-action-benchmark, fail-on-alert)",,"automated, not persisted",main.yaml and pull_request.yaml; baseline kept only in the Actions cache
+OpenFeature,incubating,manual/ad hoc only,,,,manual/ad hoc only,Spec repo mapped to CLOMonitor code repos; flagd Makefile benchmark target not used by CI
+OpenKruise,incubating,none,,,,none,No candidate
+OpenYurt,incubating,none,,,,none,No candidate
+Operator Framework,incubating,none,,,,none,No candidate; operator-framework/test-infra (2021) has no performance job
+Strimzi,incubating,on demand only,,none,,on demand only,system-tests.yml /gha run pipeline=performance on CNCF-provided runners
+Tekton,incubating,none,,,,none,No candidate; tektoncd/plumbing has no performance job
+Thanos,incubating,none,,,,none,No candidate
+Volcano,incubating,manual/ad hoc only,,,,manual/ad hoc only,benchmark/ framework for kind+KWOK or real clusters: manual
+gRPC,incubating,automated and persisted,BigQuery + public dashboard,none,,automated and persisted,grpc/grpc tools/internal_ci performance jobs on GKE (internal CI)
+k8gb,incubating,none,,,,none,No candidate
+metal3-io,incubating,none,,,,none,No candidate in 6 code repos
+wasmCloud,incubating,automated and persisted,S3 history + site,none,,automated and persisted,bench.yml and k6bench.yml on release; bench-compare.yml manual

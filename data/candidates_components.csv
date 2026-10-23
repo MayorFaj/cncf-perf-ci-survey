@@ -1,0 +1,122 @@
+repo,file,keywords
+argoproj__argo-workflows,Makefile,-bench benchmark
+argoproj__argo-workflows,.github/workflows/ci-build.yaml,load test
+cilium__ebpf,.github/workflows/ci.yml,-bench benchmark load test
+cilium__hubble,Makefile,-bench
+cilium__tetragon,Makefile,-bench benchmark
+cilium__tetragon,.github/workflows/vmtests.yml,load test
+fluent__fluent-bit,.github/workflows/README.md,perf-test performance test performance tests performance-test
+fluent__fluent-bit,.github/workflows/resources/release-version-failure.png,k6
+fluent__fluent-bit,.github/workflows/resources/release-from-staging-workflow.png,jmh k6 wrk
+fluent__fluent-bit,.github/workflows/resources/release-approval.png,k6
+fluent__fluent-bit,.github/workflows/resources/release-from-staging-workflow-incorrect-version.png,k6
+fluent__fluent-bit,.github/workflows/resources/release-approval-per-job.png,k6
+fluent__fluent-bit,.github/workflows/resources/auto-build-test-workflow.png,k6
+fluent__fluent-bit,.github/scripts/commit_prefix_check.py,benchmark
+grpc__grpc-go,.github/codecov.yml,benchmark
+grpc__grpc-java,.github/workflows/testing.yml,load test
+knative-extensions__control-protocol,.github/workflows/kind-e2e.yaml,load test load-test
+knative-extensions__discovery,.github/workflows/kind-e2e.yaml,load-test
+knative-extensions__eventing-kafka,.github/workflows/kind-e2e.yaml,load test load-test
+knative-extensions__net-istio,.github/workflows/kind-e2e.yaml,load test load-test
+kubeflow__pipelines,.github/workflows/e2e-test.yml,scale test scale-test
+kubeflow__pipelines,.github/resources/scripts/scale_pipeline_test.py,scale-test
+kubescape__helm-charts,.github/workflows/trigger-performance-test.yaml,performance test performance-test
+kubescape__node-agent,.github/workflows/benchmark.yaml,-bench benchmark
+kubescape__node-agent,.github/workflows/bypass.yaml,benchmark
+kubescape__node-agent,.github/workflows/incluster-comp-pr-merged.yaml,benchmark
+kubescape__node-agent,.github/workflows/pr-merged.yaml,benchmark
+kubescape__node-agent,.github/workflows/component-tests.yaml,load test
+metal3-io__cluster-api-provider-metal3,Makefile,scalability
+metal3-io__ironic-image,.github/workflows/bmo-e2e.yml,load test
+microcks__hub.microcks.io,.github/skills/pr-description/references/task-3-analyze-changes.md,criterion
+microcks__hub.microcks.io,.github/instructions/performance-optimization.instructions.md,benchmark jmh k6 load test locust performance test performance tests performance-test scalability
+microcks__hub.microcks.io,.github/instructions/react.instructions.md,scalability
+microcks__hub.microcks.io,.github/workflows/build-react-app.yaml,load test
+microcks__microcks-aspire,.github/workflows/steps.dotnet-build-test.yml,load test
+microcks__microcks-testcontainers-dotnet,.github/workflows/steps.dotnet-build-test.yml,load test
+nats-io__nats.rs,.github/workflows/main.yml,benchmark criterion
+open-feature__flagd,Makefile,-bench benchmark
+open-policy-agent__gatekeeper,Makefile,-bench benchmark
+open-policy-agent__gatekeeper,.github/workflows/benchmark.yaml,benchmark benchstat
+open-policy-agent__gatekeeper,.github/workflows/test-gator.yaml,benchmark
+open-policy-agent__gatekeeper,.github/workflows/unit-test.yaml,-bench benchmark
+open-telemetry__opentelemetry-collector-contrib,.github/ISSUE_TEMPLATE/component-graduation.md,benchmark
+open-telemetry__opentelemetry-collector-contrib,.github/workflows/load-tests.yml,benchmark github-action-benchmark load test load tests load-tests loadtest loadtests
+open-telemetry__opentelemetry-collector-contrib,.github/workflows/scripts/setup_e2e_tests.sh,loadtest
+open-telemetry__opentelemetry-collector,Makefile,benchmark
+open-telemetry__opentelemetry-collector,.github/ISSUE_TEMPLATE/component-graduation.md,benchmark
+open-telemetry__opentelemetry-collector,.github/workflows/perf.yml,benchmark github-action-benchmark loadtests
+open-telemetry__opentelemetry-collector,.github/workflows/go-benchmarks.yml,benchmark codspeed
+open-telemetry__opentelemetry-collector,.github/workflows/utils/cspell.json,benchmark
+open-telemetry__opentelemetry-cpp-contrib,.github/workflows/prometheus.yml,benchmark
+open-telemetry__opentelemetry-cpp-contrib,.github/workflows/fluentd.yml,benchmark
+open-telemetry__opentelemetry-cpp-contrib,.github/workflows/codeql.yml,benchmark
+open-telemetry__opentelemetry-cpp,ci/README.md,benchmark
+open-telemetry__opentelemetry-cpp,ci/do_ci.sh,benchmark
+open-telemetry__opentelemetry-cpp,ci/setup_windows_ci_environment.ps1,benchmark
+open-telemetry__opentelemetry-cpp,.github/copilot-instructions.md,benchmark
+open-telemetry__opentelemetry-cpp,.github/workflows/benchmark.yml,benchmark github-action-benchmark
+open-telemetry__opentelemetry-cpp,.github/workflows/ci.yml,benchmark
+open-telemetry__opentelemetry-cpp,.github/workflows/codeql-analysis.yml,benchmark
+open-telemetry__opentelemetry-cpp,.github/workflows/iwyu.yml,benchmark
+open-telemetry__opentelemetry-cpp,.github/workflows/cmake_install.yml,benchmark
+open-telemetry__opentelemetry-cpp,.github/workflows/clang-tidy.yaml,benchmark
+open-telemetry__opentelemetry-dotnet-contrib,.github/component_owners.yml,benchmark
+open-telemetry__opentelemetry-dotnet-contrib,.github/skills/performance-benchmark/SKILL.md,benchmark
+open-telemetry__opentelemetry-dotnet-contrib,.github/skills/code-review/SKILL.md,benchmark
+open-telemetry__opentelemetry-dotnet-contrib,.github/skills/code-review/pr-assessment.md,benchmark
+open-telemetry__opentelemetry-dotnet-contrib,.github/workflows/ci.yml,benchmark
+open-telemetry__opentelemetry-dotnet-contrib,.github/workflows/pwsh-test.yml,load test
+open-telemetry__opentelemetry-dotnet-contrib,.github/workflows/Component.BuildTest.yml,load test
+open-telemetry__opentelemetry-dotnet-contrib,.github/workflows/publish-packages.yml,benchmark
+open-telemetry__opentelemetry-dotnet-instrumentation,.github/workflows/ci.yml,load test
+open-telemetry__opentelemetry-dotnet,.github/skills/performance-benchmark/SKILL.md,benchmark
+open-telemetry__opentelemetry-dotnet,.github/skills/code-review/SKILL.md,benchmark
+open-telemetry__opentelemetry-dotnet,.github/workflows/ci.yml,benchmark
+open-telemetry__opentelemetry-dotnet,.github/workflows/pwsh-test.yml,load test
+open-telemetry__opentelemetry-dotnet,.github/workflows/android-tests.yml,load test
+open-telemetry__opentelemetry-dotnet,.github/workflows/Component.BuildTest.yml,load test
+open-telemetry__opentelemetry-dotnet,.github/workflows/apple-tests.yml,load test
+open-telemetry__opentelemetry-dotnet,.github/workflows/maui-tests.yml,load test
+open-telemetry__opentelemetry-go-contrib,Makefile,-bench
+open-telemetry__opentelemetry-go,Makefile,-bench benchmark codspeed
+open-telemetry__opentelemetry-go,.github/copilot-instructions.md,benchmark
+open-telemetry__opentelemetry-go,.github/workflows/benchmark.yml,benchmark codspeed
+open-telemetry__opentelemetry-go,.github/workflows/ci.yml,-bench benchmark
+open-telemetry__opentelemetry-java-instrumentation,.github/workflows/publish-petclinic-benchmark-image.yml,benchmark
+open-telemetry__opentelemetry-java-instrumentation,.github/workflows/overhead-benchmark-daily.yml,benchmark
+open-telemetry__opentelemetry-java-instrumentation,.github/workflows/build-common.yml,benchmark
+open-telemetry__opentelemetry-java-instrumentation,.github/scripts/update-gradle-wrappers.sh,benchmark
+open-telemetry__opentelemetry-java,.github/workflows/benchmark.yml,benchmark github-action-benchmark jmh
+open-telemetry__opentelemetry-java,.github/workflows/build.yml,jmh
+open-telemetry__opentelemetry-java,.github/workflows/codeql.yml,benchmark
+open-telemetry__opentelemetry-js-contrib,.github/workflows/test.yml,load test
+open-telemetry__opentelemetry-js,.github/workflows/benchmark.yml,benchmark github-action-benchmark
+open-telemetry__opentelemetry-js,.github/workflows/docs.yaml,benchmark
+open-telemetry__opentelemetry-operator,.github/workflows/e2e-reusable.yaml,load test load-test
+open-telemetry__opentelemetry-php,Makefile,benchmark
+open-telemetry__opentelemetry-python-contrib,.github/workflows/generate_workflows_lib/src/generate_workflows_lib/__init__.py,benchmark
+open-telemetry__opentelemetry-python,.github/workflows/generate_workflows.py,benchmark
+open-telemetry__opentelemetry-python,.github/workflows/benchmarks.yml,benchmark github-action-benchmark
+open-telemetry__opentelemetry-rust,.github/workflows/benchmark.yml,bencher benchmark criterion github-action-benchmark
+open-telemetry__otel-arrow,Makefile,perf tests
+open-telemetry__otel-arrow,.github/renovate.json5,perf_test
+open-telemetry__otel-arrow,.github/workflows/dataflow-engine-binary-size.yml,benchmark github-action-benchmark
+open-telemetry__otel-arrow,.github/workflows/pipeline-perf-test-nightly.yml,benchmark github-action-benchmark perf-test perf_test performance test performance tests
+open-telemetry__otel-arrow,.github/workflows/comparison-dashboard.yml,benchmark
+open-telemetry__otel-arrow,.github/workflows/pipeline-perf-test-continuous.yml,benchmark github-action-benchmark perf-test perf_test performance test performance tests
+open-telemetry__otel-arrow,.github/workflows/rust-ci.yml,benchmark perf_test performance test
+open-telemetry__otel-arrow,.github/workflows/rust-bench.yml,benchmark
+open-telemetry__otel-arrow,.github/workflows/pipeline-perf-on-label.yaml,benchmark perf-test perf_test performance test
+open-telemetry__otel-arrow,.github/workflows/pipeline-perf-test-manual-pr.yaml,benchmark perf test perf-test perf-tests perf_test performance test performance tests
+open-telemetry__otel-arrow,.github/workflows/scripts/test_report_owner_coverage.py,benchmark
+open-telemetry__otel-arrow,.github/workflows/scripts/consolidate-benchmarks.sh,benchmark
+open-telemetry__otel-arrow,.github/workflows/scripts/analyze-saturation-scaling.py,benchmark github-action-benchmark perf_test
+open-telemetry__otel-arrow,.github/workflows/scripts/analyze-idle-state-scaling.py,benchmark github-action-benchmark perf_test
+openfga__dotnet-sdk,.github/workflows/main.yaml,load test
+prometheus__alertmanager,.github/pull_request_template.md,benchmark benchstat
+tektoncd__cli,.github/workflows/e2e-matrix.yml,load test
+tektoncd__operator,.github/workflows/e2e-matrix.yml,load test
+tikv__pd,Makefile,-bench
+tikv__rust-prometheus,.github/workflows/rust.yml,benchmark criterion

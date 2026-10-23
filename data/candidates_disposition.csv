@@ -1,0 +1,283 @@
+repo,file,keywords,disposition,reason,source
+Project-HAMi/HAMi,Makefile,benchmark,supporting file of coded workflow,bench target called by the coded ci.yaml smoke run,primary
+Project-HAMi/HAMi,.github/dependabot.yml,benchmark,excluded,"template, policy or documentation file",primary
+Project-HAMi/HAMi,.github/workflows/ci.yaml,benchmark,coded,,primary
+argoproj/argo-cd,.github/workflows/ci-build.yaml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+buildpacks/pack,Makefile,-bench benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),primary
+buildpacks/pack,.github/workflows/benchmark.yml,-bench benchmark github-action-benchmark,coded,,primary
+cilium/cilium,Makefile,-bench benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),primary
+cilium/cilium,.github/ariane-config.yaml,scale-test,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/setup-aks-cluster/dummy-cni-daemonset.yaml,scale-test,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/fqdn/dns-prober.yaml,perf-tests,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/l7/README.md,clusterloader nighthawk performance test,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/l7/config.yaml,perf tests,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/l7/modules/metrics.yaml,benchmark nighthawk,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/l7/manifests/deployment.yaml,nighthawk,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/l7/manifests/policy.yaml,nighthawk perf-test,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/l7/manifests/perf-client.yaml,benchmark nighthawk,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/common/setup.yaml,clusterloader2,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/egw/README.md,perf tests performance test performance tests scalability,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/egw/config.yaml,perf-test performance test scale-test,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/egw/modules/stress-metrics.yaml,scale_test,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/egw/modules/perf-test.yaml,performance tests,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/cl2-modules/egw/modules/masq-metrics.yaml,scale_test,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/actions/bpftrace/scripts/check-encryption-leaks.bt,wrk,supporting file of coded workflow,supporting file of coded Cilium scale/perf workflows,primary
+cilium/cilium,.github/ISSUE_TEMPLATE/prerelease-testing.yaml,performance test,excluded,"template, policy or documentation file",primary
+cilium/cilium,.github/workflows/scale-test-100-gce.yaml,clusterloader clusterloader2 perf-tests scale test scale-tests scaletest,coded,,primary
+cilium/cilium,.github/workflows/l7-perf.yaml,benchmark clusterloader clusterloader2 nighthawk perf test perf-tests perftest scale test scale-tests,coded,,primary
+cilium/cilium,.github/workflows/scale-test-5-gce.yaml,clusterloader clusterloader2 perf-tests scale test scale-tests scaletest,coded,,primary
+cilium/cilium,.github/workflows/net-perf-gke.yaml,perf test scale-tests,coded,,primary
+cilium/cilium,.github/workflows/scale-test-clustermesh.yaml,clusterloader clusterloader2 perf-tests scale test scale-tests,coded,,primary
+cilium/cilium,.github/workflows/scale-cleanup-kops.yaml,scale-tests,excluded,"cleanup of scale-test clusters, not a test",primary
+cilium/cilium,.github/workflows/scale-test-egw.yaml,clusterloader clusterloader2 perf-tests scale test scale-tests scaletest,coded,,primary
+cilium/cilium,.github/workflows/fqdn-perf.yaml,clusterloader clusterloader2 perf test perf-test perf-tests scale test scale-tests,coded,,primary
+cilium/cilium,.github/workflows/scale-test-node-throughput-gce.yaml,clusterloader clusterloader2 perf-tests scale test scale-tests scaletest,coded,,primary
+cilium/cilium,.github/workflows/common-post-jobs.yaml,perf tests,excluded,shared post-job steps,primary
+containerd/containerd,Makefile,-bench benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),primary
+coredns/coredns,.github/SECURITY.md,criterion,excluded,"template, policy or documentation file",primary
+dapr/dapr,.github/copilot-instructions.md,performance tests,excluded,"template, policy or documentation file",primary
+dapr/dapr,.github/ISSUE_TEMPLATE/endgame.md,perf test performance tests,excluded,"template, policy or documentation file",primary
+dapr/dapr,.github/ISSUE_TEMPLATE/release-planning.md,performance test,excluded,"template, policy or documentation file",primary
+dapr/dapr,.github/ISSUE_TEMPLATE/minor-patch-release.md,performance tests,excluded,"template, policy or documentation file",primary
+dapr/dapr,.github/workflows/dapr-test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+dapr/dapr,.github/workflows/kind-e2e.yaml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+dapr/dapr,.github/workflows/dapr-perf-publish-charts.yml,perf test,supporting file of coded workflow,manual chart publishing for docs (noted in dapr-perf row),primary
+dapr/dapr,.github/workflows/dapr-perf-components.yml,load test perf test perf tests perf-test perf_test perf_tests performance tests,coded,,primary
+dapr/dapr,.github/workflows/dapr-perf.yml,load test perf test perf tests perf-test perf_test perf_tests performance tests,coded,,primary
+dapr/dapr,.github/workflows/version-skew.yaml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+dapr/dapr,.github/workflows/dapr.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+dapr/dapr,.github/scripts/dapr_bot.js,perf test perf-test performance test,supporting file of coded workflow,bot handling the ok-to-perf command (noted in dapr-perf row),primary
+emissary-ingress/emissary,.github/pull_request_template.md,scalability,excluded,"template, policy or documentation file",primary
+envoyproxy/envoy,.github/copilot-instructions.md,performance tests,excluded,"template, policy or documentation file",primary
+etcd-io/etcd,Makefile,benchmark,supporting file of coded workflow,bench-put target called by the coded Prow job ci-etcd-benchmark-put-amd64,primary
+fluent/fluentd,.github/workflows/benchmark.yml,benchmark,coded,,primary
+fluxcd/flux2,.github/workflows/conformance.yaml,benchmark,excluded,"conformance test, not performance",primary
+fluxcd/flux2,.github/runners/README.md,benchmark,excluded,"template, policy or documentation file",primary
+goharbor/harbor,.github/workflows/conformance_test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+istio/istio,.github/pull_request_template.md,scalability,excluded,"template, policy or documentation file",primary
+istio/istio,.github/ISSUE_TEMPLATE/bug_report.yml,scalability,excluded,"template, policy or documentation file",primary
+istio/istio,.github/ISSUE_TEMPLATE/feature_request.md,scalability,excluded,"template, policy or documentation file",primary
+karmada-io/karmada,.github/workflows/ci-performance-compare.yaml,performance test performance-test,coded,,primary
+kedacore/keda,.github/workflows/template-smoke-tests.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kedacore/keda,.github/workflows/template-main-e2e-test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kedacore/keda,.github/workflows/template-s390x-smoke-tests.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kedacore/keda,.github/workflows/pr-e2e.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+keycloak/keycloak,.github/scripts/aws/rds/aurora_create.sh,benchmark,excluded,Aurora database integration-test setup (reuses keycloak-benchmark infrastructure scripts),primary
+keycloak/keycloak,.github/scripts/ansible/roles/mvn_remote_runner/README.md,benchmark,excluded,"template, policy or documentation file",primary
+keycloak/keycloak,.github/scripts/ansible/roles/keycloak_remote_installer/README.md,benchmark,excluded,"template, policy or documentation file",primary
+knative/serving,.github/workflows/kind-e2e.yaml,load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kserve/kserve,.github/actions/upload-test-results/action.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kserve/kserve,.github/workflows/e2e-test-llmisvc.yaml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kserve/kserve,.github/workflows/e2e-test-modelcache.yaml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kserve/kserve,.github/workflows/e2e-test-kernelcache.yaml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kserve/kserve,.github/workflows/python-test.yml,load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kserve/kserve,.github/workflows/e2e-test.yml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+kubevirt/kubevirt,Makefile,perftest perftests,supporting file of coded workflow,perftest target called by the coded Prow job periodic-kubevirt-e2e-k8s-1.36-sig-performance,primary
+kyverno/kyverno,Makefile,-bench benchmark,coded,,primary
+kyverno/kyverno,.github/actions/tools/install/action.yaml,k6,supporting file of coded workflow,supporting file of coded Kyverno k6 workflow,primary
+kyverno/kyverno,.github/actions/tools/k6/action.yaml,k6,supporting file of coded workflow,supporting file of coded Kyverno k6 workflow,primary
+kyverno/kyverno,.github/workflows/tests-k6.yaml,k6,coded,,primary
+kyverno/kyverno,.github/workflows/check-tests.yaml,benchmark k6,coded,,primary
+linkerd/linkerd2,.github/stale.yml,benchmark,excluded,"template, policy or documentation file",primary
+longhorn/longhorn,.github/ISSUE_TEMPLATE/performance-benchmark.md,benchmark,excluded,"template, policy or documentation file",primary
+longhorn/longhorn,.github/workflows/create-release-task-issues.yml,benchmark,excluded,creates a manual benchmark task issue per release (project coded manual/ad hoc),primary
+meshery/meshery,.github/integration-test-config.yaml,benchmark fortio,excluded,tests the product performance-test feature,primary
+meshery/meshery,.github/security-self-assessment.md,benchmark load test load tests,excluded,"template, policy or documentation file",primary
+meshery/meshery,.github/agents/github-actions-engineer.md,benchmark,excluded,"template, policy or documentation file",primary
+meshery/meshery,.github/agents/meshery-code-contributor.md,benchmark,excluded,"template, policy or documentation file",primary
+meshery/meshery,.github/actions/upload-test-artifacts/action.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+meshery/meshery,.github/assets/images/clone.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/binding_relationship.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/hierarchical_relationship.png,wrk,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/slack.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/mount_edge_relationship.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/fork.png,k6 wrk,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/network_policy_edge_relationship.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/meshery/meshery-logo-tag-light-text-side.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/meshery/meshery-logo-dark-text-side.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/meshery/icon-only/meshery-light-icon-shadow.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/meshery/full logo/meshery-logo-dark-tex-shadow.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/meshery/full logo/meshery-logo-light-text-shadow.png,jmh k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/meshery/full logo/meshery-logo-shadow-light-white-text-side.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/meshery/text-only/meshery-text-white.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/readme/mesheryctl.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/readme/Layer5-MeshMentors.png,wrk,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/readme/meshery-dashboard-hero-image.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/readme/layer5-community-sign.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/readme/meshery_benchmark_screen.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/readme/Meshery-Grafana-Charts.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/readme/meshery_multi_mesh.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/assets/images/readme/thumbnail.png,k6,excluded,image file (binary match),primary
+meshery/meshery,.github/meetings/archive/2026-07-15-7871.md,loadtest,excluded,"template, policy or documentation file",primary
+meshery/meshery,.github/workflows/test-e2e.yml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+meshery/meshery,.github/workflows/rego-lint-and-test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+meshery/meshery,.github/workflows/mesheryctl-e2e.yaml,performance tests,excluded,"tests the product performance-test feature (mesheryctl perf), not Meshery performance",primary
+meshery/meshery,.github/workflows/eslint-gh.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+metal3-io/baremetal-operator,.github/workflows/plugin-test.yml,load-test,excluded,plugin loading test,primary
+microcks/microcks,.github/workflows/api-check.yml,k6,excluded,k6 used for functional API checks,primary
+nats-io/nats-server,.github/workflows/mqtt-test.yaml,-bench benchmark,coded,,primary
+open-policy-agent/opa,Makefile,-bench benchmark benchstat,excluded,"developer targets (perf, benchlab); CI uses go run ./build/bench-* directly",primary
+open-policy-agent/opa,.github/workflows/benchmarks-nightly.yaml,-bench benchmark,coded,,primary
+open-policy-agent/opa,.github/workflows/benchmarks.yaml,benchmark,coded,,primary
+openfga/openfga,Makefile,-bench benchmark,supporting file of coded workflow,test-bench target called by the coded main.yaml and pull_request.yaml,primary
+openfga/openfga,.github/workflows/main.yaml,-bench benchmark github-action-benchmark,coded,,primary
+openfga/openfga,.github/workflows/pull_request.yaml,-bench benchmark github-action-benchmark,coded,,primary
+projectcontour/contour,Makefile,-bench,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),primary
+prometheus/prometheus,Makefile,benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),primary
+prometheus/prometheus,.github/PULL_REQUEST_TEMPLATE.md,benchmark,excluded,"template, policy or documentation file",primary
+prometheus/prometheus,.github/workflows/prombench.yml,benchmark,coded,,primary
+strimzi/strimzi-kafka-operator,.github/actions/systemtests/run-perf-report/generate-report.js,performance test,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/actions/build/integration-test-strimzi/action.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+strimzi/strimzi-kafka-operator,.github/actions/build/unit-test-strimzi/action.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+strimzi/strimzi-kafka-operator,.github/tests/expected/perf-report/single-arch-both-operators-expected.md,performance test scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/expected/perf-report/multi-arch-both-operators-expected.md,performance test scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/expected/perf-report/multi-arch-topic-operator-expected.md,performance test scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/inputs/perf-report/single-arch-both-operators/2025-11-18-10-30-00/topic-operator/results-table.md,scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/inputs/perf-report/single-arch-both-operators/2025-11-18-10-30-00/user-operator/results-table.md,scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/inputs/perf-report/multi-arch-both-operators/performance-results-amd64/2025-11-18-10-30-00/topic-operator/results-table.md,scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/inputs/perf-report/multi-arch-both-operators/performance-results-amd64/2025-11-18-10-30-00/user-operator/results-table.md,scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/inputs/perf-report/multi-arch-both-operators/performance-results-arm64/2025-11-18-10-30-00/topic-operator/results-table.md,scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/inputs/perf-report/multi-arch-both-operators/performance-results-arm64/2025-11-18-10-30-00/user-operator/results-table.md,scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/inputs/perf-report/multi-arch-topic-operator/performance-results-amd64/2025-11-18-10-30-00/topic-operator/results-table.md,scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/tests/inputs/perf-report/multi-arch-topic-operator/performance-results-arm64/2025-11-18-10-30-00/topic-operator/results-table.md,scalability,supporting file of coded workflow,supporting file or test fixture of coded Strimzi performance pipeline,primary
+strimzi/strimzi-kafka-operator,.github/docs/sts-workflow.png,k6,excluded,image file (binary match),primary
+tektoncd/pipeline,.github/workflows/e2e-matrix-extras.yaml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+tektoncd/pipeline,.github/workflows/e2e-matrix.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",primary
+tikv/tikv,Makefile,benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),primary
+vitessio/vitess,.github/workflows/arewefastyet_comment.yml,benchmark,coded,,primary
+vitessio/vitess,.github/workflows/update_golang_version.yml,benchmark,supporting file of coded workflow,adds the Benchmark me label to Go upgrade PRs (noted in Vitess row),primary
+volcano-sh/volcano,.github/PULL_REQUEST_TEMPLATE.md,benchmark,excluded,"template, policy or documentation file",primary
+volcano-sh/volcano,.github/ISSUE_TEMPLATE/bug_report.yaml,benchmark,excluded,"template, policy or documentation file",primary
+wasmCloud/wasmCloud,.github/CODEOWNERS,benchmark,excluded,"template, policy or documentation file",primary
+wasmCloud/wasmCloud,.github/workflows/k6bench-smoke.yml,k6,excluded,20-second smoke run that keeps the k6 scripts runnable; publishes nothing,primary
+wasmCloud/wasmCloud,.github/workflows/k6bench.yml,k6 load tests,coded,,primary
+wasmCloud/wasmCloud,.github/workflows/bench-run.yml,-bench criterion,coded,,primary
+wasmCloud/wasmCloud,.github/workflows/bench.yml,-bench,coded,,primary
+wasmCloud/wasmCloud,.github/workflows/bench-compare.yml,-bench,coded,,primary
+wasmCloud/wasmCloud,.github/workflows/wash.yml,-bench benchmark,excluded,compiles benches only (cargo test --benches --no-run),primary
+wasmCloud/wasmCloud,.github/workflows/k6bench-run.yml,criterion k6,coded,,primary
+wasmCloud/wasmCloud,.github/scripts/bench-push-results.mjs,-bench criterion k6,supporting file of coded workflow,supporting script of coded wasmCloud bench workflows,primary
+wasmCloud/wasmCloud,.github/scripts/bench-check-runner-version.mjs,-bench,supporting file of coded workflow,supporting script of coded wasmCloud bench workflows,primary
+wasmCloud/wasmCloud,.github/scripts/bench-push-results.test.mjs,k6,supporting file of coded workflow,supporting script of coded wasmCloud bench workflows,primary
+wasmCloud/wasmCloud,.github/scripts/bench-preflight.mjs,-bench criterion k6,supporting file of coded workflow,supporting script of coded wasmCloud bench workflows,primary
+argoproj/argo-workflows,Makefile,-bench benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+argoproj/argo-workflows,.github/workflows/ci-build.yaml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+cilium/ebpf,.github/workflows/ci.yml,-bench benchmark load test,coded,,clomonitor-component
+cilium/hubble,Makefile,-bench,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+cilium/tetragon,Makefile,-bench benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+cilium/tetragon,.github/workflows/vmtests.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+fluent/fluent-bit,.github/workflows/README.md,perf-test performance test performance tests performance-test,excluded,"template, policy or documentation file",clomonitor-component
+fluent/fluent-bit,.github/workflows/resources/release-version-failure.png,k6,excluded,image file (binary match),clomonitor-component
+fluent/fluent-bit,.github/workflows/resources/release-from-staging-workflow.png,jmh k6 wrk,excluded,image file (binary match),clomonitor-component
+fluent/fluent-bit,.github/workflows/resources/release-approval.png,k6,excluded,image file (binary match),clomonitor-component
+fluent/fluent-bit,.github/workflows/resources/release-from-staging-workflow-incorrect-version.png,k6,excluded,image file (binary match),clomonitor-component
+fluent/fluent-bit,.github/workflows/resources/release-approval-per-job.png,k6,excluded,image file (binary match),clomonitor-component
+fluent/fluent-bit,.github/workflows/resources/auto-build-test-workflow.png,k6,excluded,image file (binary match),clomonitor-component
+fluent/fluent-bit,.github/scripts/commit_prefix_check.py,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+grpc/grpc-go,.github/codecov.yml,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+grpc/grpc-java,.github/workflows/testing.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+knative-extensions/control-protocol,.github/workflows/kind-e2e.yaml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+knative-extensions/discovery,.github/workflows/kind-e2e.yaml,load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+knative-extensions/eventing-kafka,.github/workflows/kind-e2e.yaml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+knative-extensions/net-istio,.github/workflows/kind-e2e.yaml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+kubeflow/pipelines,.github/workflows/e2e-test.yml,scale test scale-test,excluded,"DAG scale test checks success only, no measurement",clomonitor-component
+kubeflow/pipelines,.github/resources/scripts/scale_pipeline_test.py,scale-test,excluded,"scale correctness script, no measurement",clomonitor-component
+kubescape/helm-charts,.github/workflows/trigger-performance-test.yaml,performance test performance-test,coded,,clomonitor-component
+kubescape/node-agent,.github/workflows/benchmark.yaml,-bench benchmark,coded,,clomonitor-component
+kubescape/node-agent,.github/workflows/bypass.yaml,benchmark,excluded,manual bypass of the benchmark check,clomonitor-component
+kubescape/node-agent,.github/workflows/incluster-comp-pr-merged.yaml,benchmark,excluded,calls component tests; benchmark keyword only,clomonitor-component
+kubescape/node-agent,.github/workflows/pr-merged.yaml,benchmark,excluded,merge workflow; benchmark keyword only,clomonitor-component
+kubescape/node-agent,.github/workflows/component-tests.yaml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+metal3-io/cluster-api-provider-metal3,Makefile,scalability,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+metal3-io/ironic-image,.github/workflows/bmo-e2e.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+microcks/hub.microcks.io,.github/skills/pr-description/references/task-3-analyze-changes.md,criterion,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+microcks/hub.microcks.io,.github/instructions/performance-optimization.instructions.md,benchmark jmh k6 load test locust performance test performance tests performance-test scalability,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+microcks/hub.microcks.io,.github/instructions/react.instructions.md,scalability,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+microcks/hub.microcks.io,.github/workflows/build-react-app.yaml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+microcks/microcks-aspire,.github/workflows/steps.dotnet-build-test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+microcks/microcks-testcontainers-dotnet,.github/workflows/steps.dotnet-build-test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+nats-io/nats.rs,.github/workflows/main.yml,benchmark criterion,coded,,clomonitor-component
+open-feature/flagd,Makefile,-bench benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+open-policy-agent/gatekeeper,Makefile,-bench benchmark,supporting file of coded workflow,benchmark-test and native-bench-test targets called by the coded gatekeeper workflows,clomonitor-component
+open-policy-agent/gatekeeper,.github/workflows/benchmark.yaml,benchmark benchstat,coded,,clomonitor-component
+open-policy-agent/gatekeeper,.github/workflows/test-gator.yaml,benchmark,excluded,"tests the gator bench CLI feature, not Gatekeeper performance",clomonitor-component
+open-policy-agent/gatekeeper,.github/workflows/unit-test.yaml,-bench benchmark,coded,,clomonitor-component
+open-telemetry/opentelemetry-collector-contrib,.github/ISSUE_TEMPLATE/component-graduation.md,benchmark,excluded,"template, policy or documentation file",clomonitor-component
+open-telemetry/opentelemetry-collector-contrib,.github/workflows/load-tests.yml,benchmark github-action-benchmark load test load tests load-tests loadtest loadtests,coded,,clomonitor-component
+open-telemetry/opentelemetry-collector-contrib,.github/workflows/scripts/setup_e2e_tests.sh,loadtest,excluded,e2e setup script,clomonitor-component
+open-telemetry/opentelemetry-collector,Makefile,benchmark,supporting file of coded workflow,gobenchmark target called by the coded perf.yml,clomonitor-component
+open-telemetry/opentelemetry-collector,.github/ISSUE_TEMPLATE/component-graduation.md,benchmark,excluded,"template, policy or documentation file",clomonitor-component
+open-telemetry/opentelemetry-collector,.github/workflows/perf.yml,benchmark github-action-benchmark loadtests,coded,,clomonitor-component
+open-telemetry/opentelemetry-collector,.github/workflows/go-benchmarks.yml,benchmark codspeed,coded,,clomonitor-component
+open-telemetry/opentelemetry-collector,.github/workflows/utils/cspell.json,benchmark,excluded,"template, policy or documentation file",clomonitor-component
+open-telemetry/opentelemetry-cpp-contrib,.github/workflows/prometheus.yml,benchmark,excluded,build; benchmark library install only,clomonitor-component
+open-telemetry/opentelemetry-cpp-contrib,.github/workflows/fluentd.yml,benchmark,excluded,build; benchmark library only,clomonitor-component
+open-telemetry/opentelemetry-cpp-contrib,.github/workflows/codeql.yml,benchmark,excluded,CodeQL; benchmark library only,clomonitor-component
+open-telemetry/opentelemetry-cpp,ci/README.md,benchmark,excluded,"template, policy or documentation file",clomonitor-component
+open-telemetry/opentelemetry-cpp,ci/do_ci.sh,benchmark,supporting file of coded workflow,script behind the coded opentelemetry-cpp benchmark job,clomonitor-component
+open-telemetry/opentelemetry-cpp,ci/setup_windows_ci_environment.ps1,benchmark,excluded,installs the benchmark library only,clomonitor-component
+open-telemetry/opentelemetry-cpp,.github/copilot-instructions.md,benchmark,excluded,"template, policy or documentation file",clomonitor-component
+open-telemetry/opentelemetry-cpp,.github/workflows/benchmark.yml,benchmark github-action-benchmark,coded,,clomonitor-component
+open-telemetry/opentelemetry-cpp,.github/workflows/ci.yml,benchmark,coded,,clomonitor-component
+open-telemetry/opentelemetry-cpp,.github/workflows/codeql-analysis.yml,benchmark,excluded,CodeQL; benchmark library install only,clomonitor-component
+open-telemetry/opentelemetry-cpp,.github/workflows/iwyu.yml,benchmark,excluded,include-what-you-use; benchmark library only,clomonitor-component
+open-telemetry/opentelemetry-cpp,.github/workflows/cmake_install.yml,benchmark,excluded,install test; benchmark library only,clomonitor-component
+open-telemetry/opentelemetry-cpp,.github/workflows/clang-tidy.yaml,benchmark,excluded,clang-tidy; benchmark library only,clomonitor-component
+open-telemetry/opentelemetry-dotnet-contrib,.github/component_owners.yml,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/opentelemetry-dotnet-contrib,.github/skills/performance-benchmark/SKILL.md,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/opentelemetry-dotnet-contrib,.github/skills/code-review/SKILL.md,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/opentelemetry-dotnet-contrib,.github/skills/code-review/pr-assessment.md,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/opentelemetry-dotnet-contrib,.github/workflows/ci.yml,benchmark,excluded,path filter for benchmark project only,clomonitor-component
+open-telemetry/opentelemetry-dotnet-contrib,.github/workflows/pwsh-test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-dotnet-contrib,.github/workflows/Component.BuildTest.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-dotnet-contrib,.github/workflows/publish-packages.yml,benchmark,excluded,package publishing; benchmark keyword only,clomonitor-component
+open-telemetry/opentelemetry-dotnet-instrumentation,.github/workflows/ci.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-dotnet,.github/skills/performance-benchmark/SKILL.md,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/opentelemetry-dotnet,.github/skills/code-review/SKILL.md,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/opentelemetry-dotnet,.github/workflows/ci.yml,benchmark,coded,,clomonitor-component
+open-telemetry/opentelemetry-dotnet,.github/workflows/pwsh-test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-dotnet,.github/workflows/android-tests.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-dotnet,.github/workflows/Component.BuildTest.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-dotnet,.github/workflows/apple-tests.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-dotnet,.github/workflows/maui-tests.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-go-contrib,Makefile,-bench,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+open-telemetry/opentelemetry-go,Makefile,-bench benchmark codspeed,supporting file of coded workflow,benchmark and test-bench targets called by the coded benchmark.yml and ci.yml,clomonitor-component
+open-telemetry/opentelemetry-go,.github/copilot-instructions.md,benchmark,excluded,"template, policy or documentation file",clomonitor-component
+open-telemetry/opentelemetry-go,.github/workflows/benchmark.yml,benchmark codspeed,coded,,clomonitor-component
+open-telemetry/opentelemetry-go,.github/workflows/ci.yml,-bench benchmark,coded,,clomonitor-component
+open-telemetry/opentelemetry-java-instrumentation,.github/workflows/publish-petclinic-benchmark-image.yml,benchmark,excluded,builds the image used by the overhead benchmark,clomonitor-component
+open-telemetry/opentelemetry-java-instrumentation,.github/workflows/overhead-benchmark-daily.yml,benchmark,coded,,clomonitor-component
+open-telemetry/opentelemetry-java-instrumentation,.github/workflows/build-common.yml,benchmark,excluded,build workflow; benchmark keyword only,clomonitor-component
+open-telemetry/opentelemetry-java-instrumentation,.github/scripts/update-gradle-wrappers.sh,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/opentelemetry-java,.github/workflows/benchmark.yml,benchmark github-action-benchmark jmh,coded,,clomonitor-component
+open-telemetry/opentelemetry-java,.github/workflows/build.yml,jmh,excluded,build workflow; jmh compile only,clomonitor-component
+open-telemetry/opentelemetry-java,.github/workflows/codeql.yml,benchmark,excluded,CodeQL; benchmarks branch filter only,clomonitor-component
+open-telemetry/opentelemetry-js-contrib,.github/workflows/test.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-js,.github/workflows/benchmark.yml,benchmark github-action-benchmark,coded,,clomonitor-component
+open-telemetry/opentelemetry-js,.github/workflows/docs.yaml,benchmark,excluded,docs publishing,clomonitor-component
+open-telemetry/opentelemetry-operator,.github/workflows/e2e-reusable.yaml,load test load-test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+open-telemetry/opentelemetry-php,Makefile,benchmark,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+open-telemetry/opentelemetry-python-contrib,.github/workflows/generate_workflows_lib/src/generate_workflows_lib/__init__.py,benchmark,excluded,workflow generator,clomonitor-component
+open-telemetry/opentelemetry-python,.github/workflows/generate_workflows.py,benchmark,excluded,workflow generator,clomonitor-component
+open-telemetry/opentelemetry-python,.github/workflows/benchmarks.yml,benchmark github-action-benchmark,coded,,clomonitor-component
+open-telemetry/opentelemetry-rust,.github/workflows/benchmark.yml,bencher benchmark criterion github-action-benchmark,coded,,clomonitor-component
+open-telemetry/otel-arrow,Makefile,perf tests,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+open-telemetry/otel-arrow,.github/renovate.json5,perf_test,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/dataflow-engine-binary-size.yml,benchmark github-action-benchmark,coded,,clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/pipeline-perf-test-nightly.yml,benchmark github-action-benchmark perf-test perf_test performance test performance tests,coded,,clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/comparison-dashboard.yml,benchmark,excluded,dashboard build (results come from the perf workflows),clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/pipeline-perf-test-continuous.yml,benchmark github-action-benchmark perf-test perf_test performance test performance tests,coded,,clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/rust-ci.yml,benchmark perf_test performance test,excluded,build/test workflow; perf keywords refer to perf crates,clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/rust-bench.yml,benchmark,supporting file of coded workflow,"on demand (cargobench label), report only; covered by otel-arrow rows",clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/pipeline-perf-on-label.yaml,benchmark perf-test perf_test performance test,supporting file of coded workflow,on demand variant of the pipeline perf suite (noted in otel-arrow row),clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/pipeline-perf-test-manual-pr.yaml,benchmark perf test perf-test perf-tests perf_test performance test performance tests,supporting file of coded workflow,manual variant of the pipeline perf suite (noted in otel-arrow row),clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/scripts/test_report_owner_coverage.py,benchmark,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/scripts/consolidate-benchmarks.sh,benchmark,supporting file of coded workflow,supporting script of coded otel-arrow perf workflows,clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/scripts/analyze-saturation-scaling.py,benchmark github-action-benchmark perf_test,supporting file of coded workflow,supporting script of coded otel-arrow perf workflows,clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/scripts/analyze-idle-state-scaling.py,benchmark github-action-benchmark perf_test,supporting file of coded workflow,supporting script of coded otel-arrow perf workflows,clomonitor-component
+openfga/dotnet-sdk,.github/workflows/main.yaml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+prometheus/alertmanager,.github/pull_request_template.md,benchmark benchstat,excluded,"template, policy or documentation file",clomonitor-component
+tektoncd/cli,.github/workflows/e2e-matrix.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+tektoncd/operator,.github/workflows/e2e-matrix.yml,load test,excluded,"false positive: ""load test"" only inside ""upload test..."" (Deviation 1)",clomonitor-component
+tikv/pd,Makefile,-bench,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
+tikv/rust-prometheus,.github/workflows/rust.yml,benchmark criterion,coded,,clomonitor-component
