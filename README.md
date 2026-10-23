@@ -26,6 +26,8 @@ In a companion study of kgateway's nightly scale tests ([dataset](https://doi.or
 | `data/candidates_disposition.csv` | What happened to every candidate: coded, supporting file, or excluded with a reason |
 | `data/coding_workflows.csv` | One row per performance workflow or job (step 2) |
 | `data/coding_projects.csv` | One row per project with the project-level outcome (step 2) |
+| `data/actions_tracked.csv` | The GitHub Actions workflows (and, where needed, the job inside them) whose run history is collected in step 3 |
+| `scripts/run_history.py`, `.github/workflows/run-history.yml` | Step 3: 90-day run history from the public GitHub API, committed as `data/run_history_<date>.csv` |
 | `scripts/code_workflows.py`, `scripts/code_projects.py`, `scripts/candidate_dispositions.py` | Generate the three coding files; each row records what was read and at which commit |
 
 ## Reproduce step 1
