@@ -1,58 +1,58 @@
-project,repo,workflow_file,collected_at,window_start,state,runs,completed,success,failure,cancelled,skipped,success_rate_completed,success_rate_excl_skipped,runs_capped,last_run_at,last_run_event,job_regex,job_sample_runs,job_sample_runs_with_job,job_conclusions,note
-Open Policy Agent (OPA),open-policy-agent/opa,benchmarks-nightly.yaml,2026-10-23T23:00:37Z,2026-07-25,active,56,56,54,1,1,0,0.964,0.964,,2026-10-23T02:16:43Z,schedule,,,,,
-Open Policy Agent (OPA),open-policy-agent/opa,benchmarks.yaml,2026-10-23T23:00:37Z,2026-07-25,active,367,367,322,23,22,0,0.877,0.877,,2026-10-23T11:51:50Z,push,,,,,
-OpenFGA,openfga/openfga,main.yaml,2026-10-23T23:00:37Z,2026-07-25,active,47,47,33,14,0,0,0.702,0.702,,2026-10-20T14:14:36Z,push,(?i)bench,30,30,success=30,benchmark job inside main workflow
-OpenFGA,openfga/openfga,pull_request.yaml,2026-10-23T23:00:37Z,2026-07-25,active,409,409,124,190,51,0,0.303,0.303,,2026-10-23T10:32:42Z,pull_request,(?i)bench,30,24,cancelled=6;success=18,benchmark job inside PR workflow
-Buildpacks,buildpacks/pack,benchmark.yml,2026-10-23T23:00:37Z,2026-07-25,active,9,9,6,3,0,0,0.667,0.667,,2026-10-21T16:32:56Z,push,,,,,
-Cilium,cilium/cilium,scale-test-100-gce.yaml,2026-10-23T23:00:37Z,2026-07-25,active,66,66,59,7,0,0,0.894,0.894,,2026-10-23T01:09:58Z,schedule,,,,,
-Cilium,cilium/cilium,scale-test-5-gce.yaml,2026-10-23T23:00:37Z,2026-07-25,active,67,67,46,21,0,0,0.687,0.687,,2026-10-23T05:30:52Z,schedule,,,,,
-Cilium,cilium/cilium,scale-test-node-throughput-gce.yaml,2026-10-23T23:00:37Z,2026-07-25,active,91,91,91,0,0,0,1.0,1.0,,2026-10-23T01:10:29Z,schedule,,,,,
-Cilium,cilium/cilium,scale-test-egw.yaml,2026-10-23T23:00:37Z,2026-07-25,active,67,67,39,28,0,0,0.582,0.582,,2026-10-23T01:04:20Z,schedule,,,,,
-Cilium,cilium/cilium,scale-test-clustermesh.yaml,2026-10-23T23:00:37Z,2026-07-25,active,67,67,63,4,0,0,0.94,0.94,,2026-10-23T12:52:07Z,schedule,,,,,
-Cilium,cilium/cilium,fqdn-perf.yaml,2026-10-23T23:00:37Z,2026-07-25,active,65,65,64,1,0,0,0.985,0.985,,2026-10-23T06:59:05Z,schedule,,,,,
-Cilium,cilium/cilium,l7-perf.yaml,2026-10-23T23:00:37Z,2026-07-25,active,65,65,44,21,0,0,0.677,0.677,,2026-10-23T01:04:38Z,schedule,,,,,
-Cilium,cilium/cilium,net-perf-gke.yaml,2026-10-23T23:00:37Z,2026-07-25,active,68,68,63,5,0,0,0.926,0.926,,2026-10-23T01:10:27Z,schedule,,,,,
-Dapr,dapr/dapr,dapr-perf.yml,2026-10-23T23:00:37Z,2026-07-25,active,102,102,75,26,1,0,0.735,0.735,,2026-10-22T23:47:25Z,schedule,,,,,
-Dapr,dapr/dapr,dapr-perf-components.yml,2026-10-23T23:00:37Z,2026-07-25,active,17,17,4,13,0,0,0.235,0.235,,2026-10-17T04:43:06Z,schedule,,,,,
-Fluentd,fluent/fluentd,benchmark.yml,2026-10-23T23:00:37Z,2026-07-25,active,235,235,202,13,8,0,0.86,0.86,,2026-10-23T05:51:33Z,push,,,,,
-HAMi,Project-HAMi/HAMi,ci.yaml,2026-10-23T23:00:37Z,2026-07-25,active,2500,2500,1472,607,432,0,0.589,0.589,yes,2026-10-23T22:23:57Z,push,^Benchmark,30,29,cancelled=1;skipped=1;success=27,smoke run inside CI workflow
-Karmada,karmada-io/karmada,ci-performance-compare.yaml,2026-10-23T23:00:37Z,2026-07-25,active,0,0,0,0,0,0,,,,,,,,,,
-Kyverno,kyverno/kyverno,check-tests.yaml,2026-10-23T23:00:37Z,2026-07-25,active,491,491,42,364,85,0,0.086,0.086,,2026-10-23T22:23:50Z,push,(?i)^(Performance benchmarks|K6 tests),30,29,success=129,jobs inside check-tests workflow (k6 is a reusable workflow)
-NATS,nats-io/nats-server,mqtt-test.yaml,2026-10-23T23:00:37Z,2026-07-25,active,763,763,582,132,2,0,0.763,0.763,,2026-10-23T06:55:35Z,pull_request,,,,,
-Prometheus,prometheus/prometheus,prombench.yml,2026-10-23T23:00:37Z,2026-07-25,active,24,24,24,0,0,0,1.0,1.0,,2026-10-02T16:16:27Z,repository_dispatch,,,,,
-Vitess,vitessio/vitess,arewefastyet_comment.yml,2026-10-23T23:00:37Z,2026-07-25,active,2500,2500,19,0,0,2500,0.008,,yes,2026-10-23T20:05:28Z,pull_request_target,,,,,only the hand-over comment; benchmarks run on arewefastyet
-wasmCloud,wasmCloud/wasmCloud,bench.yml,2026-10-23T23:00:37Z,2026-07-25,active,33,33,22,7,4,0,0.667,0.667,,2026-10-22T18:49:11Z,workflow_dispatch,,,,,
-wasmCloud,wasmCloud/wasmCloud,k6bench.yml,2026-10-23T23:00:37Z,2026-07-25,active,1,1,0,1,0,0,0.0,0.0,,2026-10-21T01:02:42Z,release,,,,,
-wasmCloud,wasmCloud/wasmCloud,bench-compare.yml,2026-10-23T23:00:37Z,2026-07-25,active,4,4,3,1,0,0,0.75,0.75,,2026-10-23T20:13:42Z,workflow_dispatch,,,,,
-Strimzi,strimzi/strimzi-kafka-operator,system-tests.yml,2026-10-23T23:00:37Z,2026-07-25,active,1369,1367,1286,67,13,0,0.941,0.941,,2026-10-23T21:25:37Z,issue_comment,(?i)perf,30,30,skipped=30,performance report job runs only when the performance pipeline was requested
-Keycloak,keycloak/keycloak-benchmark,rosa-scheduled-run.yml,2026-10-23T23:00:37Z,2026-07-25,active,19,19,7,11,1,0,0.368,0.368,,2026-10-22T16:04:35Z,workflow_dispatch,,,,,
-KEDA,kedacore/keda-performance,execute-performance.yaml,2026-10-23T23:00:37Z,2026-07-25,disabled_inactivity,0,0,0,0,0,0,,,,,,,,,,
-Flux,fluxcd/flux-benchmark,test.yaml,2026-10-23T23:00:37Z,2026-07-25,active,2,2,1,1,0,0,0.5,0.5,,2026-08-27T10:38:30Z,pull_request,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-benchmarks,run-benchmark-rust.yml,2026-10-23T23:00:37Z,2026-07-25,active,24,24,23,1,0,0,0.958,0.958,,2026-10-21T06:32:41Z,push,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-benchmarks,run-benchmark-dotnet.yml,2026-10-23T23:00:37Z,2026-07-25,active,11,11,9,2,0,0,0.818,0.818,,2026-10-21T06:32:40Z,push,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-collector-contrib,load-tests.yml,2026-10-23T23:00:37Z,2026-07-25,active,2500,2500,126,164,387,2500,0.05,,yes,2026-10-23T22:44:04Z,pull_request,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-collector,perf.yml,2026-10-23T23:00:37Z,2026-07-25,active,309,309,280,29,0,0,0.906,0.906,,2026-10-23T19:32:16Z,push,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-collector,go-benchmarks.yml,2026-10-23T23:00:37Z,2026-07-25,active,1836,1836,1543,245,0,0,0.84,0.84,,2026-10-23T21:30:44Z,pull_request,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-go,benchmark.yml,2026-10-23T23:00:37Z,2026-07-25,active,360,360,350,10,0,0,0.972,0.972,,2026-10-23T14:56:19Z,push,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-go,ci.yml,2026-10-23T23:00:37Z,2026-07-25,active,2500,2500,2160,486,2,0,0.864,0.864,yes,2026-10-23T21:06:10Z,pull_request,^test-bench,30,28,success=28,smoke run inside CI workflow
-OpenTelemetry,open-telemetry/opentelemetry-java,benchmark.yml,2026-10-23T23:00:37Z,2026-07-25,active,213,213,211,1,0,0,0.991,0.991,,2026-10-22T20:11:13Z,push,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-java-instrumentation,overhead-benchmark-daily.yml,2026-10-23T23:00:37Z,2026-07-25,active,91,91,91,0,0,0,1.0,1.0,,2026-10-23T05:10:44Z,schedule,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-js,benchmark.yml,2026-10-23T23:00:37Z,2026-07-25,active,170,170,166,3,1,0,0.976,0.976,,2026-10-22T23:57:37Z,push,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-python,benchmarks.yml,2026-10-23T23:00:37Z,2026-07-25,active,150,150,147,3,0,0,0.98,0.98,,2026-10-23T14:53:57Z,push,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-cpp,benchmark.yml,2026-10-23T23:00:37Z,2026-07-25,active,242,242,242,0,0,0,1.0,1.0,,2026-10-23T12:38:16Z,push,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-cpp,ci.yml,2026-10-23T23:00:37Z,2026-07-25,active,2284,2284,1519,704,17,0,0.665,0.665,,2026-10-23T14:06:14Z,pull_request,^Benchmark$,30,30,failure=1;success=29,benchmark job inside CI workflow
-OpenTelemetry,open-telemetry/opentelemetry-rust,benchmark.yml,2026-10-23T23:00:37Z,2026-07-25,active,676,676,112,31,0,533,0.166,0.783,,2026-10-23T20:55:10Z,pull_request,,,,,
-OpenTelemetry,open-telemetry/opentelemetry-dotnet,ci.yml,2026-10-23T23:00:37Z,2026-07-25,active,2500,2500,2045,514,59,0,0.818,0.818,yes,2026-10-23T20:46:09Z,pull_request,^Validate benchmarks,30,30,skipped=5;success=50,smoke run inside CI workflow
-OpenTelemetry,open-telemetry/otel-arrow,pipeline-perf-test-nightly.yml,2026-10-23T23:00:37Z,2026-07-25,active,182,182,109,73,0,0,0.599,0.599,,2026-10-23T16:12:03Z,schedule,,,,,
-OpenTelemetry,open-telemetry/otel-arrow,pipeline-perf-test-continuous.yml,2026-10-23T23:00:37Z,2026-07-25,active,480,480,469,7,4,0,0.977,0.977,,2026-10-23T05:07:49Z,push,,,,,
-OpenTelemetry,open-telemetry/otel-arrow,dataflow-engine-binary-size.yml,2026-10-23T23:00:37Z,2026-07-25,active,487,487,459,2,26,0,0.943,0.943,,2026-10-23T05:07:49Z,push,,,,,
-Open Policy Agent (OPA),open-policy-agent/gatekeeper,benchmark.yaml,2026-10-23T23:00:37Z,2026-07-25,active,311,311,0,3,0,308,0.0,0.0,,2026-10-23T05:06:54Z,issue_comment,,,,,
-Open Policy Agent (OPA),open-policy-agent/gatekeeper,unit-test.yaml,2026-10-23T23:00:37Z,2026-07-25,active,818,817,630,152,25,0,0.771,0.771,,2026-10-23T05:05:07Z,pull_request,^Benchmarks$,30,26,success=26,benchmark job inside unit-test workflow
-Kubescape,kubescape/node-agent,benchmark.yaml,2026-10-23T23:00:37Z,2026-07-25,active,499,498,270,44,178,0,0.542,0.542,,2026-10-23T17:19:56Z,pull_request,,,,,
-Kubescape,kubescape/helm-charts,trigger-performance-test.yaml,2026-10-23T23:00:37Z,2026-07-25,active,10,10,0,0,0,10,0.0,,,2026-10-18T11:25:50Z,pull_request,,,,,
-NATS,nats-io/nats.rs,main.yml,2026-10-23T23:00:37Z,2026-07-25,active,15,15,15,0,0,0,1.0,1.0,,2026-10-23T09:18:51Z,push,(?i)^benchmark,15,15,success=15,benchmark job inside main workflow
-TiKV,tikv/rust-prometheus,rust.yml,2026-10-23T23:00:37Z,2026-07-25,active,1,1,0,1,0,0,0.0,0.0,,2026-08-06T16:55:59Z,pull_request,^Benchmarks \(criterion\),1,0,,benchmark job inside CI workflow
-Cilium,cilium/ebpf,ci.yml,2026-10-23T23:00:37Z,2026-07-25,active,171,171,64,89,11,0,0.374,0.374,,2026-10-21T01:04:26Z,pull_request,^Run benchmarks,30,23,skipped=3;success=20,smoke run inside CI workflow
-Envoy,envoyproxy/gateway,build_and_test.yaml,2026-10-23T23:00:37Z,2026-07-25,active,2500,2500,934,2135,3,0,0.374,0.374,yes,2026-10-23T23:08:36Z,push,^(go-benchmark-test|benchmark-test),30,29,skipped=8;success=50,outside defined scope
-Envoy,envoyproxy/gateway,release.yaml,2026-10-23T23:00:37Z,2026-07-25,active,6,6,6,0,0,0,1.0,1.0,,2026-09-28T16:30:34Z,push,^benchmark-test,6,6,success=6,outside defined scope
-Falco,falcosecurity/libs,perf.yml,2026-10-23T23:00:37Z,2026-07-25,active,113,113,106,6,1,0,0.938,0.938,,2026-10-23T01:02:51Z,pull_request,,,,,outside defined scope
+project,repo,workflow_file,collected_at,window_start,state,runs,completed,success,failure,cancelled,skipped,success_rate_completed,success_rate_excl_skipped,runs_capped,schedule_runs,schedule_success,push_runs,push_success,dispatch_runs,dispatch_success,last_run_at,last_run_event,job_regex,job_sample_runs,job_sample_runs_with_job,job_conclusions,note
+Open Policy Agent (OPA),open-policy-agent/opa,benchmarks-nightly.yaml,2026-10-23T23:21:56Z,2026-07-25,active,56,56,54,1,1,0,0.964,0.964,,52,51,0,0,4,3,2026-10-23T02:16:43Z,schedule,,,,,
+Open Policy Agent (OPA),open-policy-agent/opa,benchmarks.yaml,2026-10-23T23:21:56Z,2026-07-25,active,367,367,322,23,22,0,0.877,0.877,,0,0,367,322,0,0,2026-10-23T11:51:50Z,push,,,,,
+OpenFGA,openfga/openfga,main.yaml,2026-10-23T23:21:56Z,2026-07-25,active,47,47,33,14,0,0,0.702,0.702,,0,0,47,33,0,0,2026-10-20T14:14:36Z,push,(?i)bench,30,30,success=30,benchmark job inside main workflow
+OpenFGA,openfga/openfga,pull_request.yaml,2026-10-23T23:21:56Z,2026-07-25,active,409,409,124,190,51,0,0.303,0.303,,0,0,0,0,0,0,2026-10-23T10:32:42Z,pull_request,(?i)bench,30,24,cancelled=6;success=18,benchmark job inside PR workflow
+Buildpacks,buildpacks/pack,benchmark.yml,2026-10-23T23:21:56Z,2026-07-25,active,9,9,6,3,0,0,0.667,0.667,,0,0,9,6,0,0,2026-10-21T16:32:56Z,push,,,,,
+Cilium,cilium/cilium,scale-test-100-gce.yaml,2026-10-23T23:21:56Z,2026-07-25,active,66,66,59,7,0,0,0.894,0.894,,65,58,0,0,1,1,2026-10-23T01:09:58Z,schedule,,,,,
+Cilium,cilium/cilium,scale-test-5-gce.yaml,2026-10-23T23:21:56Z,2026-07-25,active,67,67,46,21,0,0,0.687,0.687,,65,45,0,0,2,1,2026-10-23T05:30:52Z,schedule,,,,,
+Cilium,cilium/cilium,scale-test-node-throughput-gce.yaml,2026-10-23T23:21:56Z,2026-07-25,active,91,91,91,0,0,0,1.0,1.0,,91,91,0,0,0,0,2026-10-23T01:10:29Z,schedule,,,,,
+Cilium,cilium/cilium,scale-test-egw.yaml,2026-10-23T23:21:56Z,2026-07-25,active,67,67,39,28,0,0,0.582,0.582,,65,38,0,0,2,1,2026-10-23T01:04:20Z,schedule,,,,,
+Cilium,cilium/cilium,scale-test-clustermesh.yaml,2026-10-23T23:21:56Z,2026-07-25,active,67,67,63,4,0,0,0.94,0.94,,65,61,0,0,2,2,2026-10-23T12:52:07Z,schedule,,,,,
+Cilium,cilium/cilium,fqdn-perf.yaml,2026-10-23T23:21:56Z,2026-07-25,active,65,65,64,1,0,0,0.985,0.985,,65,64,0,0,0,0,2026-10-23T06:59:05Z,schedule,,,,,
+Cilium,cilium/cilium,l7-perf.yaml,2026-10-23T23:21:56Z,2026-07-25,active,65,65,44,21,0,0,0.677,0.677,,65,44,0,0,0,0,2026-10-23T01:04:38Z,schedule,,,,,
+Cilium,cilium/cilium,net-perf-gke.yaml,2026-10-23T23:21:56Z,2026-07-25,active,68,68,63,5,0,0,0.926,0.926,,65,60,0,0,3,3,2026-10-23T01:10:27Z,schedule,,,,,
+Dapr,dapr/dapr,dapr-perf.yml,2026-10-23T23:21:56Z,2026-07-25,active,102,102,75,26,1,0,0.735,0.735,,91,71,0,0,0,0,2026-10-22T23:47:25Z,schedule,,,,,
+Dapr,dapr/dapr,dapr-perf-components.yml,2026-10-23T23:21:56Z,2026-07-25,active,17,17,4,13,0,0,0.235,0.235,,13,2,0,0,2,1,2026-10-17T04:43:06Z,schedule,,,,,
+Fluentd,fluent/fluentd,benchmark.yml,2026-10-23T23:21:56Z,2026-07-25,active,235,235,202,13,8,0,0.86,0.86,,0,0,61,61,0,0,2026-10-23T05:51:33Z,push,,,,,
+HAMi,Project-HAMi/HAMi,ci.yaml,2026-10-23T23:21:56Z,2026-07-25,active,2500,2500,1472,607,432,0,0.589,0.589,yes,0,0,519,346,0,0,2026-10-23T22:23:57Z,push,^Benchmark,30,29,cancelled=1;skipped=1;success=27,smoke run inside CI workflow
+Karmada,karmada-io/karmada,ci-performance-compare.yaml,2026-10-23T23:21:56Z,2026-07-25,active,0,0,0,0,0,0,,,,0,0,0,0,0,0,,,,,,,
+Kyverno,kyverno/kyverno,check-tests.yaml,2026-10-23T23:21:56Z,2026-07-25,active,491,491,42,364,85,0,0.086,0.086,,0,0,489,40,2,2,2026-10-23T22:23:50Z,push,(?i)^(Performance benchmarks|K6 tests),30,29,success=129,jobs inside check-tests workflow (k6 is a reusable workflow)
+NATS,nats-io/nats-server,mqtt-test.yaml,2026-10-23T23:21:56Z,2026-07-25,active,763,763,582,132,2,0,0.763,0.763,,0,0,0,0,0,0,2026-10-23T06:55:35Z,pull_request,,,,,
+Prometheus,prometheus/prometheus,prombench.yml,2026-10-23T23:21:56Z,2026-07-25,active,24,24,24,0,0,0,1.0,1.0,,0,0,0,0,0,0,2026-10-02T16:16:27Z,repository_dispatch,,,,,
+Vitess,vitessio/vitess,arewefastyet_comment.yml,2026-10-23T23:21:56Z,2026-07-25,active,2500,2500,19,0,0,2500,0.008,,yes,0,0,0,0,0,0,2026-10-23T20:05:28Z,pull_request_target,,,,,only the hand-over comment; benchmarks run on arewefastyet
+wasmCloud,wasmCloud/wasmCloud,bench.yml,2026-10-23T23:21:56Z,2026-07-25,active,33,33,22,7,4,0,0.667,0.667,,0,0,0,0,23,17,2026-10-22T18:49:11Z,workflow_dispatch,,,,,
+wasmCloud,wasmCloud/wasmCloud,k6bench.yml,2026-10-23T23:21:56Z,2026-07-25,active,1,1,0,1,0,0,0.0,0.0,,0,0,0,0,0,0,2026-10-21T01:02:42Z,release,,,,,
+wasmCloud,wasmCloud/wasmCloud,bench-compare.yml,2026-10-23T23:21:56Z,2026-07-25,active,4,4,3,1,0,0,0.75,0.75,,0,0,0,0,4,3,2026-10-23T20:13:42Z,workflow_dispatch,,,,,
+Strimzi,strimzi/strimzi-kafka-operator,system-tests.yml,2026-10-23T23:21:56Z,2026-07-25,active,1369,1368,1287,67,13,0,0.941,0.941,,0,0,0,0,27,23,2026-10-23T21:25:37Z,issue_comment,(?i)perf,30,30,skipped=30,performance report job runs only when the performance pipeline was requested
+Keycloak,keycloak/keycloak-benchmark,rosa-scheduled-run.yml,2026-10-23T23:21:56Z,2026-07-25,active,19,19,7,11,1,0,0.368,0.368,,13,5,0,0,6,2,2026-10-22T16:04:35Z,workflow_dispatch,,,,,
+KEDA,kedacore/keda-performance,execute-performance.yaml,2026-10-23T23:21:56Z,2026-07-25,disabled_inactivity,0,0,0,0,0,0,,,,0,0,0,0,0,0,,,,,,,
+Flux,fluxcd/flux-benchmark,test.yaml,2026-10-23T23:21:56Z,2026-07-25,active,2,2,1,1,0,0,0.5,0.5,,0,0,1,0,0,0,2026-08-27T10:38:30Z,pull_request,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-benchmarks,run-benchmark-rust.yml,2026-10-23T23:21:56Z,2026-07-25,active,24,24,23,1,0,0,0.958,0.958,,0,0,24,23,0,0,2026-10-21T06:32:41Z,push,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-benchmarks,run-benchmark-dotnet.yml,2026-10-23T23:21:56Z,2026-07-25,active,11,11,9,2,0,0,0.818,0.818,,0,0,11,9,0,0,2026-10-21T06:32:40Z,push,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-collector-contrib,load-tests.yml,2026-10-23T23:21:56Z,2026-07-25,active,2500,2500,126,165,387,2500,0.05,,yes,182,120,5,4,1,1,2026-10-23T22:44:04Z,pull_request,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-collector,perf.yml,2026-10-23T23:21:56Z,2026-07-25,active,309,309,280,29,0,0,0.906,0.906,,0,0,309,280,0,0,2026-10-23T19:32:16Z,push,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-collector,go-benchmarks.yml,2026-10-23T23:21:56Z,2026-07-25,active,1836,1836,1543,245,0,0,0.84,0.84,,0,0,243,241,0,0,2026-10-23T21:30:44Z,pull_request,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-go,benchmark.yml,2026-10-23T23:21:56Z,2026-07-25,active,360,360,350,10,0,0,0.972,0.972,,6,6,353,343,1,1,2026-10-23T14:56:19Z,push,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-go,ci.yml,2026-10-23T23:21:56Z,2026-07-25,active,2500,2500,2160,486,2,0,0.864,0.864,yes,0,0,407,390,0,0,2026-10-23T21:06:10Z,pull_request,^test-bench,30,28,success=28,smoke run inside CI workflow
+OpenTelemetry,open-telemetry/opentelemetry-java,benchmark.yml,2026-10-23T23:21:56Z,2026-07-25,active,213,213,211,1,0,0,0.991,0.991,,0,0,213,211,0,0,2026-10-22T20:11:13Z,push,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-java-instrumentation,overhead-benchmark-daily.yml,2026-10-23T23:21:56Z,2026-07-25,active,91,91,91,0,0,0,1.0,1.0,,91,91,0,0,0,0,2026-10-23T05:10:44Z,schedule,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-js,benchmark.yml,2026-10-23T23:21:56Z,2026-07-25,active,170,170,166,3,1,0,0.976,0.976,,0,0,170,166,0,0,2026-10-22T23:57:37Z,push,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-python,benchmarks.yml,2026-10-23T23:21:56Z,2026-07-25,active,150,150,147,3,0,0,0.98,0.98,,0,0,150,147,0,0,2026-10-23T14:53:57Z,push,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-cpp,benchmark.yml,2026-10-23T23:21:56Z,2026-07-25,active,242,242,242,0,0,0,1.0,1.0,,0,0,242,242,0,0,2026-10-23T12:38:16Z,push,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-cpp,ci.yml,2026-10-23T23:21:56Z,2026-07-25,active,2284,2284,1519,704,17,0,0.665,0.665,,0,0,242,220,0,0,2026-10-23T14:06:14Z,pull_request,^Benchmark$,30,30,failure=1;success=29,benchmark job inside CI workflow
+OpenTelemetry,open-telemetry/opentelemetry-rust,benchmark.yml,2026-10-23T23:21:56Z,2026-07-25,active,676,676,112,31,0,533,0.166,0.783,,91,76,0,0,0,0,2026-10-23T20:55:10Z,pull_request,,,,,
+OpenTelemetry,open-telemetry/opentelemetry-dotnet,ci.yml,2026-10-23T23:21:56Z,2026-07-25,active,2500,2500,2045,514,59,0,0.818,0.818,yes,0,0,386,385,0,0,2026-10-23T20:46:09Z,pull_request,^Validate benchmarks,30,30,skipped=5;success=50,smoke run inside CI workflow
+OpenTelemetry,open-telemetry/otel-arrow,pipeline-perf-test-nightly.yml,2026-10-23T23:21:56Z,2026-07-25,active,182,182,109,73,0,0,0.599,0.599,,182,109,0,0,0,0,2026-10-23T16:12:03Z,schedule,,,,,
+OpenTelemetry,open-telemetry/otel-arrow,pipeline-perf-test-continuous.yml,2026-10-23T23:21:56Z,2026-07-25,active,480,480,469,7,4,0,0.977,0.977,,0,0,472,467,0,0,2026-10-23T05:07:49Z,push,,,,,
+OpenTelemetry,open-telemetry/otel-arrow,dataflow-engine-binary-size.yml,2026-10-23T23:21:56Z,2026-07-25,active,487,487,459,2,26,0,0.943,0.943,,91,91,396,368,0,0,2026-10-23T05:07:49Z,push,,,,,
+Open Policy Agent (OPA),open-policy-agent/gatekeeper,benchmark.yaml,2026-10-23T23:21:56Z,2026-07-25,active,311,311,0,3,0,308,0.0,0.0,,0,0,0,0,0,0,2026-10-23T05:06:54Z,issue_comment,,,,,
+Open Policy Agent (OPA),open-policy-agent/gatekeeper,unit-test.yaml,2026-10-23T23:21:56Z,2026-07-25,active,818,817,630,152,25,0,0.771,0.771,,0,0,333,278,0,0,2026-10-23T05:05:07Z,pull_request,^Benchmarks$,30,26,success=26,benchmark job inside unit-test workflow
+Kubescape,kubescape/node-agent,benchmark.yaml,2026-10-23T23:21:56Z,2026-07-25,active,499,498,270,44,178,0,0.542,0.542,,0,0,0,0,1,1,2026-10-23T17:19:56Z,pull_request,,,,,
+Kubescape,kubescape/helm-charts,trigger-performance-test.yaml,2026-10-23T23:21:56Z,2026-07-25,active,10,10,0,0,0,10,0.0,,,0,0,0,0,0,0,2026-10-18T11:25:50Z,pull_request,,,,,
+NATS,nats-io/nats.rs,main.yml,2026-10-23T23:21:56Z,2026-07-25,active,15,15,15,0,0,0,1.0,1.0,,0,0,15,15,0,0,2026-10-23T09:18:51Z,push,(?i)^benchmark,15,15,success=15,benchmark job inside main workflow
+TiKV,tikv/rust-prometheus,rust.yml,2026-10-23T23:21:56Z,2026-07-25,active,1,1,0,1,0,0,0.0,0.0,,0,0,0,0,0,0,2026-08-06T16:55:59Z,pull_request,^Benchmarks \(criterion\),1,0,,benchmark job inside CI workflow
+Cilium,cilium/ebpf,ci.yml,2026-10-23T23:21:56Z,2026-07-25,active,171,171,64,89,11,0,0.374,0.374,,0,0,30,18,0,0,2026-10-21T01:04:26Z,pull_request,^Run benchmarks,30,23,skipped=3;success=20,smoke run inside CI workflow
+Envoy,envoyproxy/gateway,build_and_test.yaml,2026-10-23T23:21:56Z,2026-07-25,active,2500,2500,934,2135,3,0,0.374,0.374,yes,0,0,447,66,0,0,2026-10-23T23:27:02Z,pull_request,^(go-benchmark-test|benchmark-test),30,29,skipped=8;success=50,outside defined scope
+Envoy,envoyproxy/gateway,release.yaml,2026-10-23T23:21:56Z,2026-07-25,active,6,6,6,0,0,0,1.0,1.0,,0,0,6,6,0,0,2026-09-28T16:30:34Z,push,^benchmark-test,6,6,success=6,outside defined scope
+Falco,falcosecurity/libs,perf.yml,2026-10-23T23:21:56Z,2026-07-25,active,113,113,106,6,1,0,0.938,0.938,,0,0,0,0,0,0,2026-10-23T01:02:51Z,pull_request,,,,,outside defined scope
