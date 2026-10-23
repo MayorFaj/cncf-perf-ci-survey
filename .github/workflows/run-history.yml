@@ -1,0 +1,38 @@
+name: run-history
+
+# Protocol step 3: collects the last 90 days of run history for every coded
+# GitHub Actions performance workflow (data/actions_tracked.csv) from the public
+# GitHub API, and commits the result as data/run_history_<date>.csv.
+# Started by hand so that the collection date is chosen and recorded.
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Window in days before the collection time"
+        default: "90"
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect run history
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DAYS: ${{ inputs.days }}
+        run: |
+          out="data/run_history_$(date -u +%Y-%m-%d).csv"
+          python3 scripts/run_history.py data/actions_tracked.csv "$out" "$DAYS"
+          echo "OUT=$out" >> "$GITHUB_ENV"
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$OUT"
+          git commit -m "Step 3: run history collected $(date -u +%Y-%m-%d)"
+          git push
