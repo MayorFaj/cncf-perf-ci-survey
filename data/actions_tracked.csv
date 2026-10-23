@@ -1,0 +1,58 @@
+project,repo,workflow_file,job_regex,note
+Open Policy Agent (OPA),open-policy-agent/opa,benchmarks-nightly.yaml,,
+Open Policy Agent (OPA),open-policy-agent/opa,benchmarks.yaml,,
+OpenFGA,openfga/openfga,main.yaml,(?i)bench,benchmark job inside main workflow
+OpenFGA,openfga/openfga,pull_request.yaml,(?i)bench,benchmark job inside PR workflow
+Buildpacks,buildpacks/pack,benchmark.yml,,
+Cilium,cilium/cilium,scale-test-100-gce.yaml,,
+Cilium,cilium/cilium,scale-test-5-gce.yaml,,
+Cilium,cilium/cilium,scale-test-node-throughput-gce.yaml,,
+Cilium,cilium/cilium,scale-test-egw.yaml,,
+Cilium,cilium/cilium,scale-test-clustermesh.yaml,,
+Cilium,cilium/cilium,fqdn-perf.yaml,,
+Cilium,cilium/cilium,l7-perf.yaml,,
+Cilium,cilium/cilium,net-perf-gke.yaml,,
+Dapr,dapr/dapr,dapr-perf.yml,,
+Dapr,dapr/dapr,dapr-perf-components.yml,,
+Fluentd,fluent/fluentd,benchmark.yml,,
+HAMi,Project-HAMi/HAMi,ci.yaml,^Benchmark,smoke run inside CI workflow
+Karmada,karmada-io/karmada,ci-performance-compare.yaml,,
+Kyverno,kyverno/kyverno,check-tests.yaml,(?i)^(Performance benchmarks|K6 tests),jobs inside check-tests workflow (k6 is a reusable workflow)
+NATS,nats-io/nats-server,mqtt-test.yaml,,
+Prometheus,prometheus/prometheus,prombench.yml,,
+Vitess,vitessio/vitess,arewefastyet_comment.yml,,only the hand-over comment; benchmarks run on arewefastyet
+wasmCloud,wasmCloud/wasmCloud,bench.yml,,
+wasmCloud,wasmCloud/wasmCloud,k6bench.yml,,
+wasmCloud,wasmCloud/wasmCloud,bench-compare.yml,,
+Strimzi,strimzi/strimzi-kafka-operator,system-tests.yml,(?i)perf,performance report job runs only when the performance pipeline was requested
+Keycloak,keycloak/keycloak-benchmark,rosa-scheduled-run.yml,,
+KEDA,kedacore/keda-performance,execute-performance.yaml,,
+Flux,fluxcd/flux-benchmark,test.yaml,,
+OpenTelemetry,open-telemetry/opentelemetry-benchmarks,run-benchmark-rust.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-benchmarks,run-benchmark-dotnet.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-collector-contrib,load-tests.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-collector,perf.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-collector,go-benchmarks.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-go,benchmark.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-go,ci.yml,^test-bench,smoke run inside CI workflow
+OpenTelemetry,open-telemetry/opentelemetry-java,benchmark.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-java-instrumentation,overhead-benchmark-daily.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-js,benchmark.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-python,benchmarks.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-cpp,benchmark.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-cpp,ci.yml,^Benchmark$,benchmark job inside CI workflow
+OpenTelemetry,open-telemetry/opentelemetry-rust,benchmark.yml,,
+OpenTelemetry,open-telemetry/opentelemetry-dotnet,ci.yml,^Validate benchmarks,smoke run inside CI workflow
+OpenTelemetry,open-telemetry/otel-arrow,pipeline-perf-test-nightly.yml,,
+OpenTelemetry,open-telemetry/otel-arrow,pipeline-perf-test-continuous.yml,,
+OpenTelemetry,open-telemetry/otel-arrow,dataflow-engine-binary-size.yml,,
+Open Policy Agent (OPA),open-policy-agent/gatekeeper,benchmark.yaml,,
+Open Policy Agent (OPA),open-policy-agent/gatekeeper,unit-test.yaml,^Benchmarks$,benchmark job inside unit-test workflow
+Kubescape,kubescape/node-agent,benchmark.yaml,,
+Kubescape,kubescape/helm-charts,trigger-performance-test.yaml,,
+NATS,nats-io/nats.rs,main.yml,(?i)^benchmark,benchmark job inside main workflow
+TiKV,tikv/rust-prometheus,rust.yml,^Benchmarks \(criterion\),benchmark job inside CI workflow
+Cilium,cilium/ebpf,ci.yml,^Run benchmarks,smoke run inside CI workflow
+Envoy,envoyproxy/gateway,build_and_test.yaml,^(go-benchmark-test|benchmark-test),outside defined scope
+Envoy,envoyproxy/gateway,release.yaml,^benchmark-test,outside defined scope
+Falco,falcosecurity/libs,perf.yml,,outside defined scope
