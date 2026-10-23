@@ -5,8 +5,10 @@ Usage: GITHUB_TOKEN=... python3 run_history.py data/actions_tracked.csv data/run
 
 For each tracked workflow it records, over the last `days` (default 90) before the collection time:
 - the workflow's state (active, disabled_manually, disabled_inactivity, or not_found);
-- the number of runs, the number of completed runs, and how many concluded success or failure
-  (counts come from the API's total_count, so they are exact even for busy workflows);
+- the number of runs, the number of completed runs, and how many concluded success, failure, cancelled
+  or skipped (counts come from the API's total_count; with a date filter it stops at 2,500, so counts at
+  that value are lower bounds, flagged in runs_capped). Workflows whose jobs run only on a comment or label
+  conclude 'skipped' on every other event, so success_rate_excl_skipped is the meaningful rate for them;
 - the date of the most recent run.
 When `job_regex` is set, the performance test is one job inside a larger workflow. The script then
 also reads the jobs of the most recent completed runs (up to JOB_SAMPLE) and reports how many of them
@@ -18,6 +20,9 @@ import csv, datetime as dt, json, os, re, sys, time, urllib.error, urllib.parse,
 
 API = "https://api.github.com"
 JOB_SAMPLE = 30
+# With a `created` filter the API reports at most this many runs (observed in the first collection);
+# counts at the cap are lower bounds and are flagged in runs_capped.
+CAP = 2500
 
 
 def get(path, params=None):
@@ -81,7 +86,7 @@ def main(tracked, out, days=90):
     now = dt.datetime.now(dt.timezone.utc)
     since = (now - dt.timedelta(days=int(days))).strftime("%Y-%m-%d")
     fields = ["project", "repo", "workflow_file", "collected_at", "window_start", "state", "runs", "completed",
-              "success", "failure", "cancelled", "success_rate_completed", "last_run_at", "last_run_event",
+              "success", "failure", "cancelled", "skipped", "success_rate_completed", "success_rate_excl_skipped", "runs_capped", "last_run_at", "last_run_event",
               "job_regex", "job_sample_runs", "job_sample_runs_with_job", "job_conclusions", "note"]
     with open(out, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
@@ -110,8 +115,12 @@ def collect(repo, wf, since, t, row):
         success, _ = count(repo, wf, since, status="success")
         failure, _ = count(repo, wf, since, status="failure")
         cancelled, _ = count(repo, wf, since, status="cancelled")
+        skipped, _ = count(repo, wf, since, status="skipped")
+        ran = completed - skipped
         row.update(runs=runs, completed=completed, success=success, failure=failure, cancelled=cancelled,
+                   skipped=skipped, runs_capped="yes" if runs >= CAP else "",
                    success_rate_completed=round(success / completed, 3) if completed else "",
+                   success_rate_excl_skipped=round(success / ran, 3) if ran > 0 else "",
                    last_run_at=(last or {}).get("created_at", ""), last_run_event=(last or {}).get("event", ""))
         if t.get("job_regex"):
             n, k, c = job_sample(repo, wf, since, t["job_regex"])
