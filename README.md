@@ -2,7 +2,7 @@
 
 A pre-registered study of how the 77 CNCF graduated and incubating projects run performance, benchmark and scale tests in continuous integration, and what they do with the results.
 
-**Status:** protocol pre-registered on 22 October 2026 (see [`PROTOCOL.md`](PROTOCOL.md)); step 2 (coding) complete on 23 October 2026; run history (step 3) and the reliability re-coding are next.
+**Status:** protocol pre-registered on 22 October 2026 (see [`PROTOCOL.md`](PROTOCOL.md)); coding, run history (23 October 2026), reliability re-coding and analysis complete (24 October 2026).
 
 **Author:** Mayowa Fajobi (ORCID [0009-0009-5848-5825](https://orcid.org/0009-0009-5848-5825))
 
@@ -28,6 +28,9 @@ In a companion study of kgateway's nightly scale tests ([dataset](https://doi.or
 | `data/coding_projects.csv` | One row per project with the project-level outcome (step 2) |
 | `data/actions_tracked.csv` | The GitHub Actions workflows (and, where needed, the job inside them) whose run history is collected in step 3 |
 | `scripts/run_history.py`, `.github/workflows/run-history.yml` | Step 3: 90-day run history from the public GitHub API, committed as `data/run_history_<date>.csv` |
+| `data/reliability_sample.json`, `data/reliability_second_coder.csv`, `analysis/reliability.json` | Blind re-coding of a seeded 20% sample and Cohen's kappa (Deviation 7) |
+| `data/supplementary_scan.csv` | Final scan of workflow names and titles, with dispositions |
+| `scripts/analyse.py`, `analysis/` | Descriptive results for RQ1 to RQ3 (`results.md`, `results.json`) and the outcome figure |
 | `scripts/code_workflows.py`, `scripts/code_projects.py`, `scripts/candidate_dispositions.py` | Generate the three coding files; each row records what was read and at which commit |
 
 ## Reproduce step 1
@@ -42,3 +45,11 @@ Requires Python 3.8+ and git. No other dependencies.
 ## Licence
 
 Code: Apache License 2.0 (`LICENSE`). Data and documents: CC BY 4.0.
+
+## Reproduce the analysis
+
+```bash
+python3 scripts/code_workflows.py && python3 scripts/code_projects.py && python3 scripts/analyse.py
+```
+
+Requires Python 3.8+ (matplotlib for the figure). `scripts/candidate_dispositions.py` additionally needs the sparse clones made by `fetch_ci_configs.py`.

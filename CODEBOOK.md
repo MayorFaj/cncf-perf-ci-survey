@@ -10,6 +10,8 @@ Rules used to code `data/coding_workflows.csv` (one row per performance workflow
 - **Scale-correctness tests** that only check that a large job succeeds, with no measurement, are excluded (for example the Kubeflow Pipelines 120-node DAG test). *(Deviation 4)*
 - Workflows that test a product's **own performance-testing feature** are excluded, because they do not measure the project's performance (Meshery `mesheryctl perf`, Gatekeeper `gator bench`). *(Deviation 4)*
 - Keyword hits for "load test" that come only from "upload test results" are false positives. *(Deviation 1)*
+- Binary or artifact **size** checks are not performance tests: they do not measure run-time behaviour (otel-arrow `dataflow-engine-binary-size.yml`, Envoy Mobile `mobile-perf.yml`). *(Deviation 7)*
+- A dedicated benchmark or load-test harness, guide, design document with results, or stress tool in the repository set counts as **manual/ad hoc** tooling; a profiling or tuning guide does not. *(Deviation 7)*
 
 ## Which repositories belong to a project *(Deviation 2)*
 
@@ -57,7 +59,7 @@ Go `Benchmark` functions alone, without a target, script or documentation that t
 
 | Project | Issue | Decision |
 | --- | --- | --- |
-| CRI-O, containerd | Kubernetes Prow node-throughput jobs run with a container runtime | Attributed to Kubernetes, which owns and reads them |
+| CRI-O, containerd | Kubernetes SIG Node runs node performance jobs against them every 12 hours | Attributed to Kubernetes, which owns them; sensitivity column shows the alternative (Deviation 8). CRI-O's own docs document an on-demand perfscale job in OpenShift CI, so CRI-O is manual/ad hoc |
 | gRPC | Benchmarks run by Google's internal CI; scripts are public, the schedule is not | Coded automated and persisted (BigQuery, public dashboard); trigger "not public" |
 | KEDA | Weekly workflow in a repository inactive since December 2023; GitHub disables schedules in inactive repositories | Coded from the configuration; step 3 run history decides whether it still runs |
 | Flux | Benchmark repository runs on PRs and pushes to `bench*` branches, prepared by hand for each release candidate | On demand only |

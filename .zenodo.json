@@ -1,0 +1,14 @@
+{
+  "title": "How do CNCF projects test performance in CI? Pre-registered study of the 77 graduated and incubating projects: protocol, coded data, run history and scripts",
+  "upload_type": "dataset",
+  "description": "<p>Replication package for a pre-registered study of how the 77 graduated and incubating Cloud Native Computing Foundation projects run performance, benchmark and scale tests in continuous integration, and what they do with the results.</p><p>Contents: the protocol with its recorded deviations (PROTOCOL.md), the codebook (CODEBOOK.md), the study population (CNCF landscape snapshot of 20 October 2026), commit SHAs of every repository searched, the disposition of every keyword candidate, workflow-level and project-level coding, 90-day GitHub Actions run history, the blind reliability re-coding with Cohen's kappa, analysis results and figure, and all scripts.</p>",
+  "creators": [
+    {"name": "Fajobi, Mayowa", "orcid": "0009-0009-5848-5825"}
+  ],
+  "keywords": ["performance testing", "continuous integration", "benchmarking", "cloud native", "CNCF", "empirical software engineering", "GitHub Actions"],
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.23568203", "relation": "references", "scheme": "doi"}
+  ],
+  "version": "1.0.0"
+}
