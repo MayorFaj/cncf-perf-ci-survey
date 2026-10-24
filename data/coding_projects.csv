@@ -32,7 +32,7 @@ Rook,graduated,none,,,,none,,none,No candidate
 SPIFFE,graduated,none,,,,none,,none,Spec repo; no candidate in CLOMonitor code repos
 SPIRE,graduated,none,,,,none,,none,No candidate
 The Update Framework (TUF),graduated,none,,,,none,,none,No candidate
-TiKV,graduated,"automated, not persisted",,none,,"automated, not persisted",1,"automated, not persisted",tikv/rust-prometheus criterion on push/PR (logs); tikv docs describe manual go-ycsb benchmarking
+TiKV,graduated,"automated, not persisted",,none,,"automated, not persisted",1,manual/ad hoc only,tikv/rust-prometheus criterion on push/PR (logs); tikv docs describe manual go-ycsb benchmarking; step 3: rust-prometheus workflow ran once in 90 days (6 Aug) and that run did not include the benchmark job
 Vitess,graduated,automated and persisted,arewefastyet database + benchmark.vitess.io,statistical comparison shown on dashboard; no automated alert found,,automated and persisted,n/a (external service: arewefastyet),automated and persisted,vitessio/arewefastyet nightly CRON + Benchmark me label
 cert-manager,graduated,none,,,,none,,none,No candidate; cert-manager/test-infra has no performance job
 containerd,graduated,manual/ad hoc only,,,,"automated, not persisted",,manual/ad hoc only,"Makefile benchmark target, not used by CI; containerd Prow jobs are builds only. Sensitivity: the Kubernetes sig-node job ci-kubernetes-node-kubelet-containerd-performance-test (every 12 h) would make it automated, not persisted"
@@ -68,7 +68,7 @@ OpenFeature,incubating,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc o
 OpenKruise,incubating,none,,,,none,,none,No candidate
 OpenYurt,incubating,none,,,,none,,none,No candidate
 Operator Framework,incubating,none,,,,none,,none,No candidate; operator-framework/test-infra (2021) has no performance job
-Strimzi,incubating,on demand only,,none,,on demand only,unknown (performance job absent from 30 sampled system-test runs),on demand only,system-tests.yml /gha run pipeline=performance on CNCF-provided runners
+Strimzi,incubating,on demand only,,none,,on demand only,unknown (performance job skipped in all 30 sampled system-test runs; kept as on demand),on demand only,system-tests.yml /gha run pipeline=performance on CNCF-provided runners
 Tekton,incubating,none,,,,none,,none,No candidate; tektoncd/plumbing has no performance job
 Thanos,incubating,none,,,,none,,none,No candidate
 Volcano,incubating,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,benchmark/ framework for kind+KWOK or real clusters: manual
