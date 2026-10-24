@@ -110,14 +110,15 @@ for r in csv.DictReader(open(RH)):
     act[r['project']]=act.get(r['project'],0)+max(n,0)
 NOT_ACTIONS={'Kubernetes','etcd','Istio','KubeVirt','Knative','gRPC'}
 DOWN={'KEDA':(M,'only workflow disabled by GitHub for inactivity (disabled_inactivity), 0 runs in 90 days'),
-      'Karmada':(M,'manual comparison workflow had 0 runs in 90 days')}
+      'Karmada':(M,'manual comparison workflow had 0 runs in 90 days'),
+      'TiKV':(M,'rust-prometheus workflow ran once in 90 days (6 Aug) and that run did not include the benchmark job')}
 F=['project','maturity','outcome','persisted_where','automated_decision','smoke_only_runs','outcome_including_outside_scope','actions_runs_90d','outcome_active','evidence']
 w=csv.DictWriter(open(D+'coding_projects.csv','w',newline=''),fieldnames=F,lineterminator='\n'); w.writeheader()
 for r in pop:
     o,p,d,s,oo,e=X[r['name']]
     nm=r['name']
     runs=('n/a (Prow or internal CI)' if nm in NOT_ACTIONS else 'n/a (external service: arewefastyet)' if nm=='Vitess'
-          else 'unknown (performance job absent from 30 sampled system-test runs)' if nm=='Strimzi'
+          else 'unknown (performance job skipped in all 30 sampled system-test runs; kept as on demand)' if nm=='Strimzi'
           else (act.get(nm,'') if nm in act else ''))
     oa,why=DOWN.get(nm,(o,''))
     w.writerow(dict(zip(F,[nm,r['maturity'],o,p,d,s,oo or o,runs,oa,e+('; step 3: '+why if why else '')])))
