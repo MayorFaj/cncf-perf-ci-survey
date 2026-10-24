@@ -8,11 +8,14 @@ D=os.path.join(ROOT,'data')+'/'
 N='none'; M='manual/ad hoc only'; O='on demand only'; A='automated, not persisted'; P='automated and persisted'; T='automated, persisted and compared'
 # name: (outcome, persisted, automated_decision, smoke_only_seen, outcome_incl_outside_scope, evidence)
 X={
-'Argo':(N,'','','', '', 'No candidate in argo-cd or 4 CLOMonitor code repos (argo-workflows Makefile has no bench target used in CI)'),
+'Argo':(M,'','','','', 'argo-workflows test/stress (stress tool and manifests) for manual stress testing; argo-cd proposal 004 on scalability benchmarking; no CI runs them. Recoded from none after the reliability check (Deviation 7)'),
+
 'Buildpacks':(T,'gh-pages history','history comparison with alert (200%, fail-on-alert)','','', 'pack benchmark.yml'),
-'CRI-O':(N,'','','','', 'No candidate; cri-o/tools (2019) is not a performance tool. Kubernetes Prow node-throughput jobs exercise a container runtime but belong to Kubernetes (ambiguous case)'),
+'CRI-O':(M,'','','',A, 'docs/ci.md documents an on-demand six-node AWS perfscale job configured in openshift/release (outside the defined set). Recoded from none after the reliability check (Deviation 7). Sensitivity: the Kubernetes sig-node job ci-node-crio-performance (every 12 h, testgrid only) would make it automated, not persisted'),
+
 'Cilium':(P,'GCS results bucket','fixed thresholds (ClusterLoader2)','yes (cilium/ebpf benchtime=1x)','', '8 scale/perf workflows in cilium/cilium'),
-'CloudEvents':(N,'','','','', 'Spec repo mapped to 4 CLOMonitor code repos (SDKs); no candidate'),
+'CloudEvents':(M,'','','','', 'Spec repo mapped to CLOMonitor code repos; sdk-go test/benchmark (end-to-end benchmark harness with README) and sdk-java benchmarks (JMH module); no CI runs them. Recoded from none (Deviation 7)'),
+
 'CoreDNS':(M,'','','','', 'coredns/perf-tests (last commit 2017-10-27): manual scripts only'),
 'Crossplane':(N,'','','','', 'No candidate'),
 'CubeFS':(M,'','','','', 'Benchmark tools in repo (blobstore/tool/bench, rpc2/bench); not run in CI'),
@@ -29,7 +32,8 @@ X={
 'KEDA':(P,'Grafana Cloud k6 + Prometheus remote write','fixed thresholds (k6)','','', 'kedacore/keda-performance weekly on AKS; repo inactive since 2023-12-27, activity checked in step 3'),
 'Karmada':(O,'','none (side-by-side, judged by people)','','', 'ci-performance-compare.yaml manual dispatch'),
 'Knative':(P,'InfluxDB + grafana.knative.dev','fixed thresholds (SLA checks)','','', 'knative/infra Prow periodic performance-tests_serving_main_periodic'),
-'KubeEdge':(N,'','','','', 'No candidate; only docs/images/perf'),
+'KubeEdge':(M,'','','','', 'docs/proposals/sig-testing/perf.md (performance test design and results) and edge/hack/memfootprint-test; no CI runs them. Recoded from none (Deviation 7)'),
+
 'Kubeflow':(N,'','','','', 'kubeflow/pipelines DAG scale test (120 nodes) checks success only, no measurement: excluded'),
 'Kubernetes':(P,'perf-dash','fixed thresholds (ClusterLoader2 SLOs, release-blocking)','','', 'kubernetes/test-infra sig-scalability jobs + kubernetes/perf-tests'),
 'Kyverno':(A,'','fixed thresholds (committed ceilings)','','', 'check-tests.yaml + tests-k6.yaml'),
@@ -44,7 +48,8 @@ X={
 'TiKV':(A,'','none','','', 'tikv/rust-prometheus criterion on push/PR (logs); tikv docs describe manual go-ycsb benchmarking'),
 'Vitess':(P,'arewefastyet database + benchmark.vitess.io','statistical comparison shown on dashboard; no automated alert found','','', 'vitessio/arewefastyet nightly CRON + Benchmark me label'),
 'cert-manager':(N,'','','','', 'No candidate; cert-manager/test-infra has no performance job'),
-'containerd':(M,'','','','', 'Makefile benchmark target, not used by CI; containerd Prow jobs are builds only'),
+'containerd':(M,'','','',A, 'Makefile benchmark target, not used by CI; containerd Prow jobs are builds only. Sensitivity: the Kubernetes sig-node job ci-kubernetes-node-kubelet-containerd-performance-test (every 12 h) would make it automated, not persisted'),
+
 'etcd':(P,'perf-dash','none','','', 'kubernetes/test-infra ci-etcd-benchmark-put-amd64 daily'),
 'in-toto':(N,'','','','', 'No candidate in 7 code repos'),
 'Artifact Hub':(N,'','','','', 'No candidate'),
@@ -58,17 +63,20 @@ X={
 'Emissary-Ingress':(N,'','','','', 'No candidate'),
 'Flatcar Container Linux':(N,'','','','', 'No candidate'),
 'Fluid':(N,'','','','', 'No candidate'),
-'HAMi':(N,'','','yes (BENCHTIME=10x, timings deliberately not compared)','', 'ci.yaml benchmark smoke run'),
+'HAMi':(M,'','','yes (BENCHTIME=10x, timings deliberately not compared)','', 'ci.yaml benchmark smoke run (not counted); benchmarks/ai-benchmark vLLM benchmark run by hand. Recoded from none (Deviation 7)'),
+
 'KServe':(M,'','','','', 'test/benchmark and docs/samples/performance-testing: manual'),
 'Keycloak':(P,'result-data branch','none on performance (error-rate check only)','','', 'keycloak/keycloak-benchmark weekly ROSA run'),
-'KubeVela':(N,'','','','', 'No candidate'),
+'KubeVela':(M,'','','','', 'hack/load-test guide, templates and Grafana dashboard for manual load tests; no CI runs them. Recoded from none (Deviation 7)'),
+
 'KubeVirt':(P,'Prometheus (3 months) + Grafana','none (audit tool not invoked)','','', 'kubevirt/project-infra periodic sig-performance 3x daily'),
 'Kubescape':(A,'','baseline comparison with gate (>10% CPU/memory vs latest release, same job)','','', 'node-agent benchmark.yaml per PR; helm-charts triggers a vendor repository on label'),
 'Lima':(N,'','','','', 'No candidate'),
 'Litmus':(N,'','','','', 'No candidate'),
 'Longhorn':(M,'','','','', 'Release checklist issue template for manual benchmarks; longhorn/benchmark (kbench) tool, CI builds the tool only'),
 'Meshery':(N,'','','','', 'Performance workflows test Meshery performance-management features, not Meshery performance: excluded'),
-'Microcks':(N,'','','','', 'k6 used for functional API tests: excluded'),
+'Microcks':(M,'','','','', 'benchmark/ k6 load-test tool with README for sizing an instance; CI k6 use is functional API testing (excluded). Recoded from none (Deviation 7)'),
+
 'NATS':(A,'','none','','', 'nats-server mqtt-test benchmarks per PR (logs, TODO compare); nats.rs cargo bench on push (artifact)'),
 'Notary Project':(N,'','','','', 'No candidate'),
 'OpenCost':(N,'','','','', 'No candidate'),

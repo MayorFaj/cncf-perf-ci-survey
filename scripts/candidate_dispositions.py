@@ -40,6 +40,7 @@ special={
  ('wasmCloud/wasmCloud','.github/workflows/wash.yml'):'compiles benches only (cargo test --benches --no-run)',
  ('wasmCloud/wasmCloud','.github/workflows/k6bench-smoke.yml'):'20-second smoke run that keeps the k6 scripts runnable; publishes nothing',
  ('wasmCloud/wasmCloud','.github/workflows/bench-host-checks.yml'):'monthly bench-host maintenance check',
+ ('open-telemetry/otel-arrow','.github/workflows/dataflow-engine-binary-size.yml'):'tracks binary size, not run-time performance',
  ('open-telemetry/otel-arrow','.github/workflows/comparison-dashboard.yml'):'dashboard build (results come from the perf workflows)',
  ('open-telemetry/otel-arrow','.github/workflows/rust-ci.yml'):'build/test workflow; perf keywords refer to perf crates',
  ('open-telemetry/otel-arrow','.github/workflows/rust-bench.yml'):'on demand (cargobench label), report only; covered by otel-arrow rows',
