@@ -1,0 +1,42 @@
+{
+ "sample": [
+  "Artifact Hub",
+  "CRI-O",
+  "Confidential Containers",
+  "Container Network Interface (CNI)",
+  "CubeFS",
+  "Dragonfly",
+  "Envoy",
+  "Falco",
+  "KServe",
+  "Kubeflow",
+  "Kyverno",
+  "OpenFGA",
+  "OpenFeature",
+  "OpenYurt",
+  "The Update Framework (TUF)",
+  "metal3-io"
+ ],
+ "seed": 20261024,
+ "n": 16,
+ "agree_before_resolution": 14,
+ "observed_agreement": 0.875,
+ "expected_agreement": 0.402,
+ "cohen_kappa": 0.791,
+ "disagreements": [
+  {
+   "project": "CRI-O",
+   "first": "none",
+   "second": "manual/ad hoc only",
+   "final": "manual/ad hoc only"
+  },
+  {
+   "project": "Envoy",
+   "first": "manual/ad hoc only",
+   "second": "automated, not persisted",
+   "final": "manual/ad hoc only"
+  }
+ ],
+ "second_coder": "separate AI coding agent (Claude, Anthropic), blind to the first coding",
+ "agree_after_resolution": 15
+}

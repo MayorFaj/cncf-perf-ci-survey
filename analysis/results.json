@@ -1,0 +1,666 @@
+{
+ "n_projects": 77,
+ "n_by_maturity": {
+  "graduated": 39,
+  "incubating": 38
+ },
+ "outcome_configured": {
+  "none": {
+   "graduated": 10,
+   "incubating": 20,
+   "all": 30
+  },
+  "manual/ad hoc only": {
+   "graduated": 12,
+   "incubating": 10,
+   "all": 22
+  },
+  "on demand only": {
+   "graduated": 3,
+   "incubating": 1,
+   "all": 4
+  },
+  "automated, not persisted": {
+   "graduated": 3,
+   "incubating": 3,
+   "all": 6
+  },
+  "automated and persisted": {
+   "graduated": 8,
+   "incubating": 4,
+   "all": 12
+  },
+  "automated, persisted and compared": {
+   "graduated": 3,
+   "incubating": 0,
+   "all": 3
+  }
+ },
+ "outcome_active": {
+  "none": {
+   "graduated": 10,
+   "incubating": 20,
+   "all": 30
+  },
+  "manual/ad hoc only": {
+   "graduated": 14,
+   "incubating": 10,
+   "all": 24
+  },
+  "on demand only": {
+   "graduated": 2,
+   "incubating": 1,
+   "all": 3
+  },
+  "automated, not persisted": {
+   "graduated": 3,
+   "incubating": 3,
+   "all": 6
+  },
+  "automated and persisted": {
+   "graduated": 7,
+   "incubating": 4,
+   "all": 11
+  },
+  "automated, persisted and compared": {
+   "graduated": 3,
+   "incubating": 0,
+   "all": 3
+  }
+ },
+ "outcome_including_outside_scope": {
+  "none": {
+   "graduated": 9,
+   "incubating": 20,
+   "all": 29
+  },
+  "manual/ad hoc only": {
+   "graduated": 9,
+   "incubating": 10,
+   "all": 19
+  },
+  "on demand only": {
+   "graduated": 3,
+   "incubating": 1,
+   "all": 4
+  },
+  "automated, not persisted": {
+   "graduated": 6,
+   "incubating": 3,
+   "all": 9
+  },
+  "automated and persisted": {
+   "graduated": 9,
+   "incubating": 4,
+   "all": 13
+  },
+  "automated, persisted and compared": {
+   "graduated": 3,
+   "incubating": 0,
+   "all": 3
+  }
+ },
+ "automated_projects": [
+  "Buildpacks",
+  "Cilium",
+  "Dapr",
+  "Fluentd",
+  "Istio",
+  "KEDA",
+  "Keycloak",
+  "Knative",
+  "KubeVirt",
+  "Kubernetes",
+  "Kubescape",
+  "Kyverno",
+  "NATS",
+  "Open Policy Agent (OPA)",
+  "OpenFGA",
+  "OpenTelemetry",
+  "TiKV",
+  "Vitess",
+  "etcd",
+  "gRPC",
+  "wasmCloud"
+ ],
+ "practice_among_automated": {
+  "n": 21,
+  "test_kind": {
+   "micro-benchmark": 12,
+   "component or load test": 12,
+   "end-to-end cluster scale test": 4
+  },
+  "trigger": {
+   "scheduled": 13,
+   "every merge or push": 9,
+   "every pull request": 7,
+   "release": 3
+  },
+  "infrastructure": {
+   "shared hosted runner": 9,
+   "shared Prow build cluster": 1,
+   "dedicated or self-hosted machine": 6,
+   "cloud cluster": 7
+  },
+  "decision": {
+   "none (report only)": 13,
+   "fixed threshold gate": 7,
+   "statistical comparison, report only": 3,
+   "automatic comparison with alert or gate": 5
+  },
+  "strongest_decision": {
+   "automatic comparison with alert or gate": 5,
+   "fixed threshold gate": 6,
+   "none (report only)": 8,
+   "statistical comparison, report only": 2
+  },
+  "persisted_beyond_ci_retention": 15
+ },
+ "per_project": {
+  "Buildpacks": {
+   "kind": [
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push"
+   ],
+   "infra": [
+    "shared hosted runner"
+   ],
+   "decision": [
+    "automatic comparison with alert or gate"
+   ],
+   "persisted": true
+  },
+  "Cilium": {
+   "kind": [
+    "component or load test",
+    "end-to-end cluster scale test"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "cloud cluster"
+   ],
+   "decision": [
+    "fixed threshold gate",
+    "none (report only)"
+   ],
+   "persisted": true
+  },
+  "Dapr": {
+   "kind": [
+    "component or load test"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "cloud cluster"
+   ],
+   "decision": [
+    "fixed threshold gate"
+   ],
+   "persisted": true
+  },
+  "Fluentd": {
+   "kind": [
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push",
+    "every pull request"
+   ],
+   "infra": [
+    "shared hosted runner"
+   ],
+   "decision": [
+    "none (report only)"
+   ],
+   "persisted": false
+  },
+  "Istio": {
+   "kind": [
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push"
+   ],
+   "infra": [
+    "dedicated or self-hosted machine"
+   ],
+   "decision": [
+    "statistical comparison, report only"
+   ],
+   "persisted": true
+  },
+  "KEDA": {
+   "kind": [
+    "component or load test"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "cloud cluster"
+   ],
+   "decision": [
+    "fixed threshold gate"
+   ],
+   "persisted": true
+  },
+  "Keycloak": {
+   "kind": [
+    "end-to-end cluster scale test"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "cloud cluster"
+   ],
+   "decision": [
+    "none (report only)"
+   ],
+   "persisted": true
+  },
+  "Knative": {
+   "kind": [
+    "component or load test"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "cloud cluster"
+   ],
+   "decision": [
+    "fixed threshold gate"
+   ],
+   "persisted": true
+  },
+  "KubeVirt": {
+   "kind": [
+    "end-to-end cluster scale test"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "dedicated or self-hosted machine"
+   ],
+   "decision": [
+    "none (report only)"
+   ],
+   "persisted": true
+  },
+  "Kubernetes": {
+   "kind": [
+    "component or load test",
+    "end-to-end cluster scale test",
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "cloud cluster"
+   ],
+   "decision": [
+    "fixed threshold gate",
+    "none (report only)"
+   ],
+   "persisted": true
+  },
+  "Kubescape": {
+   "kind": [
+    "component or load test"
+   ],
+   "trigger": [
+    "every pull request",
+    "scheduled"
+   ],
+   "infra": [
+    "shared hosted runner"
+   ],
+   "decision": [
+    "automatic comparison with alert or gate"
+   ],
+   "persisted": false
+  },
+  "Kyverno": {
+   "kind": [
+    "component or load test",
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push"
+   ],
+   "infra": [
+    "shared hosted runner"
+   ],
+   "decision": [
+    "fixed threshold gate",
+    "none (report only)"
+   ],
+   "persisted": false
+  },
+  "NATS": {
+   "kind": [
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push",
+    "every pull request"
+   ],
+   "infra": [
+    "shared hosted runner"
+   ],
+   "decision": [
+    "none (report only)"
+   ],
+   "persisted": false
+  },
+  "Open Policy Agent (OPA)": {
+   "kind": [
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push",
+    "every pull request",
+    "scheduled"
+   ],
+   "infra": [
+    "dedicated or self-hosted machine",
+    "shared hosted runner"
+   ],
+   "decision": [
+    "automatic comparison with alert or gate",
+    "none (report only)",
+    "statistical comparison, report only"
+   ],
+   "persisted": true
+  },
+  "OpenFGA": {
+   "kind": [
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push",
+    "every pull request"
+   ],
+   "infra": [
+    "shared hosted runner"
+   ],
+   "decision": [
+    "automatic comparison with alert or gate"
+   ],
+   "persisted": false
+  },
+  "OpenTelemetry": {
+   "kind": [
+    "component or load test",
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push",
+    "every pull request",
+    "release",
+    "scheduled"
+   ],
+   "infra": [
+    "dedicated or self-hosted machine",
+    "shared hosted runner"
+   ],
+   "decision": [
+    "automatic comparison with alert or gate",
+    "fixed threshold gate",
+    "none (report only)"
+   ],
+   "persisted": true
+  },
+  "TiKV": {
+   "kind": [
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "every merge or push",
+    "every pull request"
+   ],
+   "infra": [
+    "shared hosted runner"
+   ],
+   "decision": [
+    "none (report only)"
+   ],
+   "persisted": false
+  },
+  "Vitess": {
+   "kind": [
+    "component or load test",
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "release",
+    "scheduled"
+   ],
+   "infra": [
+    "dedicated or self-hosted machine"
+   ],
+   "decision": [
+    "statistical comparison, report only"
+   ],
+   "persisted": true
+  },
+  "etcd": {
+   "kind": [
+    "component or load test"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "shared Prow build cluster"
+   ],
+   "decision": [
+    "none (report only)"
+   ],
+   "persisted": true
+  },
+  "gRPC": {
+   "kind": [
+    "component or load test"
+   ],
+   "trigger": [
+    "scheduled"
+   ],
+   "infra": [
+    "cloud cluster"
+   ],
+   "decision": [
+    "none (report only)"
+   ],
+   "persisted": true
+  },
+  "wasmCloud": {
+   "kind": [
+    "component or load test",
+    "micro-benchmark"
+   ],
+   "trigger": [
+    "release"
+   ],
+   "infra": [
+    "dedicated or self-hosted machine"
+   ],
+   "decision": [
+    "none (report only)"
+   ],
+   "persisted": true
+  }
+ },
+ "run_history_file": "run_history_2026-10-23.csv",
+ "tracked_workflows": 57,
+ "tracked_in_scope": 54,
+ "scheduled_workflows": [
+  {
+   "repo": "dapr/dapr",
+   "workflow": "dapr-perf-components.yml",
+   "scheduled_runs": 13,
+   "scheduled_success": 2,
+   "rate": 0.154
+  },
+  {
+   "repo": "keycloak/keycloak-benchmark",
+   "workflow": "rosa-scheduled-run.yml",
+   "scheduled_runs": 13,
+   "scheduled_success": 5,
+   "rate": 0.385
+  },
+  {
+   "repo": "cilium/cilium",
+   "workflow": "scale-test-egw.yaml",
+   "scheduled_runs": 65,
+   "scheduled_success": 38,
+   "rate": 0.585
+  },
+  {
+   "repo": "open-telemetry/otel-arrow",
+   "workflow": "pipeline-perf-test-nightly.yml",
+   "scheduled_runs": 182,
+   "scheduled_success": 109,
+   "rate": 0.599
+  },
+  {
+   "repo": "open-telemetry/opentelemetry-collector-contrib",
+   "workflow": "load-tests.yml",
+   "scheduled_runs": 182,
+   "scheduled_success": 120,
+   "rate": 0.659
+  },
+  {
+   "repo": "cilium/cilium",
+   "workflow": "l7-perf.yaml",
+   "scheduled_runs": 65,
+   "scheduled_success": 44,
+   "rate": 0.677
+  },
+  {
+   "repo": "cilium/cilium",
+   "workflow": "scale-test-5-gce.yaml",
+   "scheduled_runs": 65,
+   "scheduled_success": 45,
+   "rate": 0.692
+  },
+  {
+   "repo": "dapr/dapr",
+   "workflow": "dapr-perf.yml",
+   "scheduled_runs": 91,
+   "scheduled_success": 71,
+   "rate": 0.78
+  },
+  {
+   "repo": "open-telemetry/opentelemetry-rust",
+   "workflow": "benchmark.yml",
+   "scheduled_runs": 91,
+   "scheduled_success": 76,
+   "rate": 0.835
+  },
+  {
+   "repo": "cilium/cilium",
+   "workflow": "scale-test-100-gce.yaml",
+   "scheduled_runs": 65,
+   "scheduled_success": 58,
+   "rate": 0.892
+  },
+  {
+   "repo": "cilium/cilium",
+   "workflow": "net-perf-gke.yaml",
+   "scheduled_runs": 65,
+   "scheduled_success": 60,
+   "rate": 0.923
+  },
+  {
+   "repo": "cilium/cilium",
+   "workflow": "scale-test-clustermesh.yaml",
+   "scheduled_runs": 65,
+   "scheduled_success": 61,
+   "rate": 0.938
+  },
+  {
+   "repo": "open-policy-agent/opa",
+   "workflow": "benchmarks-nightly.yaml",
+   "scheduled_runs": 52,
+   "scheduled_success": 51,
+   "rate": 0.981
+  },
+  {
+   "repo": "cilium/cilium",
+   "workflow": "fqdn-perf.yaml",
+   "scheduled_runs": 65,
+   "scheduled_success": 64,
+   "rate": 0.985
+  },
+  {
+   "repo": "cilium/cilium",
+   "workflow": "scale-test-node-throughput-gce.yaml",
+   "scheduled_runs": 91,
+   "scheduled_success": 91,
+   "rate": 1.0
+  },
+  {
+   "repo": "open-telemetry/opentelemetry-java-instrumentation",
+   "workflow": "overhead-benchmark-daily.yml",
+   "scheduled_runs": 91,
+   "scheduled_success": 91,
+   "rate": 1.0
+  }
+ ],
+ "scheduled_rate_median": 0.807,
+ "scheduled_below_80pct": 8,
+ "disabled_or_idle": [
+  {
+   "repo": "karmada-io/karmada",
+   "workflow": "ci-performance-compare.yaml",
+   "state": "active",
+   "non_skipped_runs": 0
+  },
+  {
+   "repo": "vitessio/vitess",
+   "workflow": "arewefastyet_comment.yml",
+   "state": "active",
+   "non_skipped_runs": 0
+  },
+  {
+   "repo": "wasmCloud/wasmCloud",
+   "workflow": "k6bench.yml",
+   "state": "active",
+   "non_skipped_runs": 1
+  },
+  {
+   "repo": "kedacore/keda-performance",
+   "workflow": "execute-performance.yaml",
+   "state": "disabled_inactivity",
+   "non_skipped_runs": 0
+  },
+  {
+   "repo": "fluxcd/flux-benchmark",
+   "workflow": "test.yaml",
+   "state": "active",
+   "non_skipped_runs": 2
+  },
+  {
+   "repo": "kubescape/helm-charts",
+   "workflow": "trigger-performance-test.yaml",
+   "state": "active",
+   "non_skipped_runs": 0
+  },
+  {
+   "repo": "tikv/rust-prometheus",
+   "workflow": "rust.yml",
+   "state": "active",
+   "non_skipped_runs": 1
+  }
+ ]
+}
