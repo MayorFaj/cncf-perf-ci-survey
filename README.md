@@ -29,6 +29,7 @@ In a companion study of kgateway's nightly scale tests ([dataset](https://doi.or
 | `data/actions_tracked.csv` | The GitHub Actions workflows (and, where needed, the job inside them) whose run history is collected in step 3 |
 | `scripts/run_history.py`, `.github/workflows/run-history.yml` | Step 3: 90-day run history from the public GitHub API, committed as `data/run_history_<date>.csv` |
 | `data/reliability_sample.json`, `data/reliability_second_coder.csv`, `analysis/reliability.json` | Blind re-coding of a seeded 20% sample and Cohen's kappa (Deviation 7) |
+| `data/perf_ci_repos.csv` | The 32 performance and CI-system repositories in the defined set (name probe and Prow configurations), with commit SHAs |
 | `data/supplementary_scan.csv` | Final scan of workflow names and titles, with dispositions |
 | `scripts/analyse.py`, `analysis/` | Descriptive results for RQ1 to RQ3 (`results.md`, `results.json`) and the outcome figure |
 | `scripts/code_workflows.py`, `scripts/code_projects.py`, `scripts/candidate_dispositions.py` | Generate the three coding files; each row records what was read and at which commit |
