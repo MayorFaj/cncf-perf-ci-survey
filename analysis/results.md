@@ -18,9 +18,9 @@ Projects: 77 ({'graduated': 39, 'incubating': 38})
 | Outcome | Graduated | Incubating | All |
 |---|---|---|---|
 | none | 10 | 20 | 30 |
-| manual/ad hoc only | 14 | 10 | 24 |
+| manual/ad hoc only | 15 | 10 | 25 |
 | on demand only | 2 | 1 | 3 |
-| automated, not persisted | 3 | 3 | 6 |
+| automated, not persisted | 2 | 3 | 5 |
 | automated and persisted | 7 | 4 | 11 |
 | automated, persisted and compared | 3 | 0 | 3 |
 

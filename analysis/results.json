@@ -43,9 +43,9 @@
    "all": 30
   },
   "manual/ad hoc only": {
-   "graduated": 14,
+   "graduated": 15,
    "incubating": 10,
-   "all": 24
+   "all": 25
   },
   "on demand only": {
    "graduated": 2,
@@ -53,9 +53,9 @@
    "all": 3
   },
   "automated, not persisted": {
-   "graduated": 3,
+   "graduated": 2,
    "incubating": 3,
-   "all": 6
+   "all": 5
   },
   "automated and persisted": {
    "graduated": 7,
