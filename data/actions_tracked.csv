@@ -45,7 +45,6 @@ OpenTelemetry,open-telemetry/opentelemetry-rust,benchmark.yml,,
 OpenTelemetry,open-telemetry/opentelemetry-dotnet,ci.yml,^Validate benchmarks,smoke run inside CI workflow
 OpenTelemetry,open-telemetry/otel-arrow,pipeline-perf-test-nightly.yml,,
 OpenTelemetry,open-telemetry/otel-arrow,pipeline-perf-test-continuous.yml,,
-OpenTelemetry,open-telemetry/otel-arrow,dataflow-engine-binary-size.yml,,
 Open Policy Agent (OPA),open-policy-agent/gatekeeper,benchmark.yaml,,
 Open Policy Agent (OPA),open-policy-agent/gatekeeper,unit-test.yaml,^Benchmarks$,benchmark job inside unit-test workflow
 Kubescape,kubescape/node-agent,benchmark.yaml,,

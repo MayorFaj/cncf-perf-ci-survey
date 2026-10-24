@@ -1,9 +1,9 @@
 project,maturity,outcome,persisted_where,automated_decision,smoke_only_runs,outcome_including_outside_scope,actions_runs_90d,outcome_active,evidence
-Argo,graduated,none,,,,none,,none,No candidate in argo-cd or 4 CLOMonitor code repos (argo-workflows Makefile has no bench target used in CI)
+Argo,graduated,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,argo-workflows test/stress (stress tool and manifests) for manual stress testing; argo-cd proposal 004 on scalability benchmarking; no CI runs them. Recoded from none after the reliability check (Deviation 7)
 Buildpacks,graduated,"automated, persisted and compared",gh-pages history,"history comparison with alert (200%, fail-on-alert)",,"automated, persisted and compared",9,"automated, persisted and compared",pack benchmark.yml
-CRI-O,graduated,none,,,,none,,none,No candidate; cri-o/tools (2019) is not a performance tool. Kubernetes Prow node-throughput jobs exercise a container runtime but belong to Kubernetes (ambiguous case)
+CRI-O,graduated,manual/ad hoc only,,,,"automated, not persisted",,manual/ad hoc only,"docs/ci.md documents an on-demand six-node AWS perfscale job configured in openshift/release (outside the defined set). Recoded from none after the reliability check (Deviation 7). Sensitivity: the Kubernetes sig-node job ci-node-crio-performance (every 12 h, testgrid only) would make it automated, not persisted"
 Cilium,graduated,automated and persisted,GCS results bucket,fixed thresholds (ClusterLoader2),yes (cilium/ebpf benchtime=1x),automated and persisted,727,automated and persisted,8 scale/perf workflows in cilium/cilium
-CloudEvents,graduated,none,,,,none,,none,Spec repo mapped to 4 CLOMonitor code repos (SDKs); no candidate
+CloudEvents,graduated,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,Spec repo mapped to CLOMonitor code repos; sdk-go test/benchmark (end-to-end benchmark harness with README) and sdk-java benchmarks (JMH module); no CI runs them. Recoded from none (Deviation 7)
 CoreDNS,graduated,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,coredns/perf-tests (last commit 2017-10-27): manual scripts only
 Crossplane,graduated,none,,,,none,,none,No candidate
 CubeFS,graduated,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,"Benchmark tools in repo (blobstore/tool/bench, rpc2/bench); not run in CI"
@@ -20,7 +20,7 @@ Jaeger,graduated,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,ja
 KEDA,graduated,automated and persisted,Grafana Cloud k6 + Prometheus remote write,fixed thresholds (k6),,automated and persisted,0,manual/ad hoc only,"kedacore/keda-performance weekly on AKS; repo inactive since 2023-12-27, activity checked in step 3; step 3: only workflow disabled by GitHub for inactivity (disabled_inactivity), 0 runs in 90 days"
 Karmada,graduated,on demand only,,"none (side-by-side, judged by people)",,on demand only,0,manual/ad hoc only,ci-performance-compare.yaml manual dispatch; step 3: manual comparison workflow had 0 runs in 90 days
 Knative,graduated,automated and persisted,InfluxDB + grafana.knative.dev,fixed thresholds (SLA checks),,automated and persisted,n/a (Prow or internal CI),automated and persisted,knative/infra Prow periodic performance-tests_serving_main_periodic
-KubeEdge,graduated,none,,,,none,,none,No candidate; only docs/images/perf
+KubeEdge,graduated,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,docs/proposals/sig-testing/perf.md (performance test design and results) and edge/hack/memfootprint-test; no CI runs them. Recoded from none (Deviation 7)
 Kubeflow,graduated,none,,,,none,,none,"kubeflow/pipelines DAG scale test (120 nodes) checks success only, no measurement: excluded"
 Kubernetes,graduated,automated and persisted,perf-dash,"fixed thresholds (ClusterLoader2 SLOs, release-blocking)",,automated and persisted,n/a (Prow or internal CI),automated and persisted,kubernetes/test-infra sig-scalability jobs + kubernetes/perf-tests
 Kyverno,graduated,"automated, not persisted",,fixed thresholds (committed ceilings),,"automated, not persisted",491,"automated, not persisted",check-tests.yaml + tests-k6.yaml
@@ -35,7 +35,7 @@ The Update Framework (TUF),graduated,none,,,,none,,none,No candidate
 TiKV,graduated,"automated, not persisted",,none,,"automated, not persisted",1,"automated, not persisted",tikv/rust-prometheus criterion on push/PR (logs); tikv docs describe manual go-ycsb benchmarking
 Vitess,graduated,automated and persisted,arewefastyet database + benchmark.vitess.io,statistical comparison shown on dashboard; no automated alert found,,automated and persisted,n/a (external service: arewefastyet),automated and persisted,vitessio/arewefastyet nightly CRON + Benchmark me label
 cert-manager,graduated,none,,,,none,,none,No candidate; cert-manager/test-infra has no performance job
-containerd,graduated,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,"Makefile benchmark target, not used by CI; containerd Prow jobs are builds only"
+containerd,graduated,manual/ad hoc only,,,,"automated, not persisted",,manual/ad hoc only,"Makefile benchmark target, not used by CI; containerd Prow jobs are builds only. Sensitivity: the Kubernetes sig-node job ci-kubernetes-node-kubelet-containerd-performance-test (every 12 h) would make it automated, not persisted"
 etcd,graduated,automated and persisted,perf-dash,none,,automated and persisted,n/a (Prow or internal CI),automated and persisted,kubernetes/test-infra ci-etcd-benchmark-put-amd64 daily
 in-toto,graduated,none,,,,none,,none,No candidate in 7 code repos
 Artifact Hub,incubating,none,,,,none,,none,No candidate
@@ -49,17 +49,17 @@ Cortex,incubating,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,c
 Emissary-Ingress,incubating,none,,,,none,,none,No candidate
 Flatcar Container Linux,incubating,none,,,,none,,none,No candidate
 Fluid,incubating,none,,,,none,,none,No candidate
-HAMi,incubating,none,,,"yes (BENCHTIME=10x, timings deliberately not compared)",none,2500,none,ci.yaml benchmark smoke run
+HAMi,incubating,manual/ad hoc only,,,"yes (BENCHTIME=10x, timings deliberately not compared)",manual/ad hoc only,2500,manual/ad hoc only,ci.yaml benchmark smoke run (not counted); benchmarks/ai-benchmark vLLM benchmark run by hand. Recoded from none (Deviation 7)
 KServe,incubating,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,test/benchmark and docs/samples/performance-testing: manual
 Keycloak,incubating,automated and persisted,result-data branch,none on performance (error-rate check only),,automated and persisted,19,automated and persisted,keycloak/keycloak-benchmark weekly ROSA run
-KubeVela,incubating,none,,,,none,,none,No candidate
+KubeVela,incubating,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,"hack/load-test guide, templates and Grafana dashboard for manual load tests; no CI runs them. Recoded from none (Deviation 7)"
 KubeVirt,incubating,automated and persisted,Prometheus (3 months) + Grafana,none (audit tool not invoked),,automated and persisted,n/a (Prow or internal CI),automated and persisted,kubevirt/project-infra periodic sig-performance 3x daily
 Kubescape,incubating,"automated, not persisted",,"baseline comparison with gate (>10% CPU/memory vs latest release, same job)",,"automated, not persisted",498,"automated, not persisted",node-agent benchmark.yaml per PR; helm-charts triggers a vendor repository on label
 Lima,incubating,none,,,,none,,none,No candidate
 Litmus,incubating,none,,,,none,,none,No candidate
 Longhorn,incubating,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,"Release checklist issue template for manual benchmarks; longhorn/benchmark (kbench) tool, CI builds the tool only"
 Meshery,incubating,none,,,,none,,none,"Performance workflows test Meshery performance-management features, not Meshery performance: excluded"
-Microcks,incubating,none,,,,none,,none,k6 used for functional API tests: excluded
+Microcks,incubating,manual/ad hoc only,,,,manual/ad hoc only,,manual/ad hoc only,benchmark/ k6 load-test tool with README for sizing an instance; CI k6 use is functional API testing (excluded). Recoded from none (Deviation 7)
 NATS,incubating,"automated, not persisted",,none,,"automated, not persisted",778,"automated, not persisted","nats-server mqtt-test benchmarks per PR (logs, TODO compare); nats.rs cargo bench on push (artifact)"
 Notary Project,incubating,none,,,,none,,none,No candidate
 OpenCost,incubating,none,,,,none,,none,No candidate

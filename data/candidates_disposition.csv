@@ -263,7 +263,7 @@ open-telemetry/opentelemetry-python,.github/workflows/benchmarks.yml,benchmark g
 open-telemetry/opentelemetry-rust,.github/workflows/benchmark.yml,bencher benchmark criterion github-action-benchmark,coded,,clomonitor-component
 open-telemetry/otel-arrow,Makefile,perf tests,excluded,Makefile target not invoked by any CI configuration (manual tooling; see coding_projects.csv),clomonitor-component
 open-telemetry/otel-arrow,.github/renovate.json5,perf_test,excluded,"configuration, assistant instructions or housekeeping script",clomonitor-component
-open-telemetry/otel-arrow,.github/workflows/dataflow-engine-binary-size.yml,benchmark github-action-benchmark,coded,,clomonitor-component
+open-telemetry/otel-arrow,.github/workflows/dataflow-engine-binary-size.yml,benchmark github-action-benchmark,excluded,"tracks binary size, not run-time performance",clomonitor-component
 open-telemetry/otel-arrow,.github/workflows/pipeline-perf-test-nightly.yml,benchmark github-action-benchmark perf-test perf_test performance test performance tests,coded,,clomonitor-component
 open-telemetry/otel-arrow,.github/workflows/comparison-dashboard.yml,benchmark,excluded,dashboard build (results come from the perf workflows),clomonitor-component
 open-telemetry/otel-arrow,.github/workflows/pipeline-perf-test-continuous.yml,benchmark github-action-benchmark perf-test perf_test performance test performance tests,coded,,clomonitor-component

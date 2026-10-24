@@ -1,0 +1,22 @@
+{
+ "seed": 20261024,
+ "n": 16,
+ "projects": [
+  "Artifact Hub",
+  "CRI-O",
+  "Confidential Containers",
+  "Container Network Interface (CNI)",
+  "CubeFS",
+  "Dragonfly",
+  "Envoy",
+  "Falco",
+  "KServe",
+  "Kubeflow",
+  "Kyverno",
+  "OpenFGA",
+  "OpenFeature",
+  "OpenYurt",
+  "The Update Framework (TUF)",
+  "metal3-io"
+ ]
+}

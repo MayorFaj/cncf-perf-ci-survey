@@ -1,0 +1,16 @@
+repo,file,disposition,reason
+kubescape/storage,.github/workflows/perf-ab.yaml,coded,paired A/B performance check (see coding_workflows.csv)
+envoyproxy/envoy,.github/workflows/mobile-perf.yml,excluded,compares Envoy Mobile binary size with main; binary size is not run-time performance (same rule as otel-arrow dataflow-engine-binary-size.yml)
+open-telemetry/opentelemetry-go-instrumentation,.github/workflows/probe_load.yaml,excluded,checks that eBPF probes load; functional test
+open-feature/flagd,.github/workflows/dev-benches-page.yml,excluded,deploys static content to GitHub Pages; no benchmark run
+wasmcloud/wasmcloud,.github/workflows/bench-host-checks.yml,excluded,monthly bench-host maintenance check
+fluent/fluentd,.github/workflows/rubocop.yml,excluded,RuboCop lint including performance cops; not a performance test
+envoyproxy/envoy,.github/workflows/_load.yml,excluded,request loading helper (name match only)
+envoyproxy/envoy,.github/workflows/_load_env.yml,excluded,request loading helper (name match only)
+envoyproxy/envoy,.github/workflows/_upload_gcs.yml,excluded,upload helper (name match only)
+chaos-mesh/chaos-mesh,.github/workflows/(upload_*),excluded,upload jobs (name match only)
+kserve/kserve,.github/workflows/python-publish.yml,excluded,package upload (name match only)
+confidential-containers/operator,.github/workflows/pre-install-image-publish-on-merge.yaml,excluded,image publish (name match only)
+open-telemetry/opentelemetry-ruby,.github/workflows/release-perform.yml,excluded,release job (name match only)
+open-telemetry/opentelemetry-ruby-contrib,.github/workflows/release-perform.yml,excluded,release job (name match only)
+tektoncd/operator,.github/workflows/bump-payload-on-*.yaml,excluded,payload bump (name match only)
