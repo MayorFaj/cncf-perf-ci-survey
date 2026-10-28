@@ -37,6 +37,6 @@
    "final": "manual/ad hoc only"
   }
  ],
- "second_coder": "separate AI coding agent (Claude, Anthropic), blind to the first coding",
+ "second_coder": "senior platform engineer, blind to the first coding; an AI coding agent given the same materials produced identical labels",
  "agree_after_resolution": 15
 }
