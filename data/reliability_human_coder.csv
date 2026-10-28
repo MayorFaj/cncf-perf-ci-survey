@@ -1,0 +1,17 @@
+project,outcome
+Artifact Hub,none
+CRI-O,manual/ad hoc only
+Confidential Containers,none
+Container Network Interface (CNI),none
+CubeFS,manual/ad hoc only
+Dragonfly,manual/ad hoc only
+Envoy,"automated, not persisted"
+Falco,none
+KServe,manual/ad hoc only
+Kubeflow,none
+Kyverno,"automated, not persisted"
+OpenFGA,"automated, not persisted"
+OpenFeature,manual/ad hoc only
+OpenYurt,none
+The Update Framework (TUF),none
+metal3-io,none
